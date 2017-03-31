@@ -1,0 +1,8 @@
+C:\Users\Admin\Desktop\git\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\Admin\Desktop\git\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
