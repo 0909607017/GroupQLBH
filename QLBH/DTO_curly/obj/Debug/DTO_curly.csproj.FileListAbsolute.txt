@@ -1,0 +1,4 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DTO_curly\bin\Debug\DTO_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DTO_curly\bin\Debug\DTO_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DTO_curly\obj\Debug\DTO_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DTO_curly\obj\Debug\DTO_curly.pdb

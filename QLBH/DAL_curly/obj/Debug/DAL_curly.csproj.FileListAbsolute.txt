@@ -1,0 +1,8 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\bin\Debug\DAL_curly.dll.config
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\bin\Debug\DAL_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\bin\Debug\DAL_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\bin\Debug\DTO_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\bin\Debug\DTO_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\obj\Debug\DAL_curly.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\obj\Debug\DAL_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DAL_curly\obj\Debug\DAL_curly.pdb

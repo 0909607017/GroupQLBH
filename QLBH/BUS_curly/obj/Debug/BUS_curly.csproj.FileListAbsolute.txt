@@ -1,0 +1,9 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\BUS_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\BUS_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\DAL_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\DTO_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\DAL_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\bin\Debug\DTO_curly.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\obj\Debug\BUS_curly.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\obj\Debug\BUS_curly.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS_curly\obj\Debug\BUS_curly.pdb
