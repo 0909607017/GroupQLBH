@@ -6,3 +6,15 @@ C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cach
 C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.exe
 C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.pdb
 C:\Users\Admin\Desktop\git\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.dll
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.dll
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.pdb
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.pdb
