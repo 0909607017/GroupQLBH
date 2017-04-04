@@ -55,11 +55,14 @@
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lstDanhsachnhacsi = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.CaSi.SuspendLayout();
+            this.NhacSi.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,56 +95,56 @@
             // albumToolStripMenuItem
             // 
             this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.A)));
+            this.albumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
             this.albumToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.albumToolStripMenuItem.Text = "Album";
             // 
             // thểLoạiToolStripMenuItem
             // 
             this.thểLoạiToolStripMenuItem.Name = "thểLoạiToolStripMenuItem";
-            this.thểLoạiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.T)));
+            this.thểLoạiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
             this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.thểLoạiToolStripMenuItem.Text = "Thể loại";
             // 
             // caSĩToolStripMenuItem
             // 
             this.caSĩToolStripMenuItem.Name = "caSĩToolStripMenuItem";
-            this.caSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.C)));
+            this.caSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
             this.caSĩToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.caSĩToolStripMenuItem.Text = "Ca sĩ";
             // 
             // nhạcSĩToolStripMenuItem
             // 
             this.nhạcSĩToolStripMenuItem.Name = "nhạcSĩToolStripMenuItem";
-            this.nhạcSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.N)));
+            this.nhạcSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
             this.nhạcSĩToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.nhạcSĩToolStripMenuItem.Text = "Nhạc sĩ";
             // 
             // bàiHátToolStripMenuItem
             // 
             this.bàiHátToolStripMenuItem.Name = "bàiHátToolStripMenuItem";
-            this.bàiHátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.B)));
+            this.bàiHátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
             this.bàiHátToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.bàiHátToolStripMenuItem.Text = "Bài hát";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.F)));
+            this.tìmKiếmToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
             this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.E)));
+            this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
@@ -287,6 +290,8 @@
             // 
             // NhacSi
             // 
+            this.NhacSi.Controls.Add(this.lstDanhsachnhacsi);
+            this.NhacSi.Controls.Add(this.label2);
             this.NhacSi.ImageIndex = 4;
             this.NhacSi.Location = new System.Drawing.Point(4, 44);
             this.NhacSi.Margin = new System.Windows.Forms.Padding(2);
@@ -319,6 +324,27 @@
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
             // 
+            // lstDanhsachnhacsi
+            // 
+            this.lstDanhsachnhacsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDanhsachnhacsi.FormattingEnabled = true;
+            this.lstDanhsachnhacsi.ItemHeight = 24;
+            this.lstDanhsachnhacsi.Location = new System.Drawing.Point(-4, 43);
+            this.lstDanhsachnhacsi.Name = "lstDanhsachnhacsi";
+            this.lstDanhsachnhacsi.Size = new System.Drawing.Size(176, 244);
+            this.lstDanhsachnhacsi.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 40);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Danh Sách Nhạc Sĩ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +364,7 @@
             this.Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.CaSi.ResumeLayout(false);
+            this.NhacSi.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,6 +397,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListBox lstDanhSachCaSi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lstDanhsachnhacsi;
+        private System.Windows.Forms.Label label2;
     }
 }
 

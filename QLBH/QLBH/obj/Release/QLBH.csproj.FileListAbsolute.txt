@@ -1,0 +1,12 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\QLBH.exe
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\QLBH.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\BUS.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\DATA.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\BUS.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Release\DATA.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.FrmMain.resources
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.Properties.Resources.resources
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.csproj.GenerateResource.Cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.exe
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Release\QLBH.pdb

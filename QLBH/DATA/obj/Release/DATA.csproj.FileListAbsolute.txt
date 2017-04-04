@@ -1,0 +1,4 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DATA\bin\Release\DATA.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DATA\bin\Release\DATA.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DATA\obj\Release\DATA.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\DATA\obj\Release\DATA.pdb

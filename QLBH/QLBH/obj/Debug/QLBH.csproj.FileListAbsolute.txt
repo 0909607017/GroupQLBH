@@ -18,3 +18,15 @@ C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.pdb
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache

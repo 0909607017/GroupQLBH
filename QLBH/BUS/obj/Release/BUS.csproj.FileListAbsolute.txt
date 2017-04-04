@@ -1,0 +1,7 @@
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\bin\Release\BUS.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\bin\Release\BUS.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\bin\Release\DATA.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\bin\Release\DATA.pdb
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\obj\Release\BUS.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\obj\Release\BUS.dll
+C:\Users\DELL\Desktop\GroupQLBH\QLBH\BUS\obj\Release\BUS.pdb
