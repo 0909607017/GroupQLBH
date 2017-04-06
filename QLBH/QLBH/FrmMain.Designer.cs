@@ -49,16 +49,23 @@
             this.BaiHat = new System.Windows.Forms.TabPage();
             this.TheLoai = new System.Windows.Forms.TabPage();
             this.Album = new System.Windows.Forms.TabPage();
+            this.btXoaAlbum = new System.Windows.Forms.Button();
+            this.btThemAlbum = new System.Windows.Forms.Button();
+            this.lbDsAlbum = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.CaSi = new System.Windows.Forms.TabPage();
             this.lstDanhSachCaSi = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lisAlbum = new System.Windows.Forms.ListBox();
+            this.lisAlbumBH = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Album.SuspendLayout();
             this.CaSi.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -242,6 +249,13 @@
             // 
             // Album
             // 
+            this.Album.BackColor = System.Drawing.Color.Silver;
+            this.Album.Controls.Add(this.lisAlbumBH);
+            this.Album.Controls.Add(this.lisAlbum);
+            this.Album.Controls.Add(this.btXoaAlbum);
+            this.Album.Controls.Add(this.btThemAlbum);
+            this.Album.Controls.Add(this.lbDsAlbum);
+            this.Album.Controls.Add(this.label2);
             this.Album.ImageIndex = 0;
             this.Album.Location = new System.Drawing.Point(4, 44);
             this.Album.Margin = new System.Windows.Forms.Padding(2);
@@ -249,7 +263,44 @@
             this.Album.Size = new System.Drawing.Size(635, 290);
             this.Album.TabIndex = 3;
             this.Album.Text = "Album";
-            this.Album.UseVisualStyleBackColor = true;
+            // 
+            // btXoaAlbum
+            // 
+            this.btXoaAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btXoaAlbum.Location = new System.Drawing.Point(104, 217);
+            this.btXoaAlbum.Name = "btXoaAlbum";
+            this.btXoaAlbum.Size = new System.Drawing.Size(75, 65);
+            this.btXoaAlbum.TabIndex = 2;
+            this.btXoaAlbum.Text = "Xóa Album";
+            this.btXoaAlbum.UseVisualStyleBackColor = true;
+            // 
+            // btThemAlbum
+            // 
+            this.btThemAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btThemAlbum.Location = new System.Drawing.Point(13, 217);
+            this.btThemAlbum.Name = "btThemAlbum";
+            this.btThemAlbum.Size = new System.Drawing.Size(75, 65);
+            this.btThemAlbum.TabIndex = 2;
+            this.btThemAlbum.Text = "Thêm Album";
+            this.btThemAlbum.UseVisualStyleBackColor = true;
+            // 
+            // lbDsAlbum
+            // 
+            this.lbDsAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbDsAlbum.Location = new System.Drawing.Point(204, 4);
+            this.lbDsAlbum.Name = "lbDsAlbum";
+            this.lbDsAlbum.Size = new System.Drawing.Size(423, 28);
+            this.lbDsAlbum.TabIndex = 0;
+            this.lbDsAlbum.Text = "Danh sách các bài hát trong Album";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(9, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Các Album hiện có";
             // 
             // CaSi
             // 
@@ -319,6 +370,22 @@
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
             // 
+            // lisAlbum
+            // 
+            this.lisAlbum.FormattingEnabled = true;
+            this.lisAlbum.Location = new System.Drawing.Point(13, 36);
+            this.lisAlbum.Name = "lisAlbum";
+            this.lisAlbum.Size = new System.Drawing.Size(166, 160);
+            this.lisAlbum.TabIndex = 3;
+            // 
+            // lisAlbumBH
+            // 
+            this.lisAlbumBH.FormattingEnabled = true;
+            this.lisAlbumBH.Location = new System.Drawing.Point(208, 36);
+            this.lisAlbumBH.Name = "lisAlbumBH";
+            this.lisAlbumBH.Size = new System.Drawing.Size(411, 238);
+            this.lisAlbumBH.TabIndex = 4;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +404,7 @@
             this.tabControl1.ResumeLayout(false);
             this.Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Album.ResumeLayout(false);
             this.CaSi.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -370,6 +438,12 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListBox lstDanhSachCaSi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btXoaAlbum;
+        private System.Windows.Forms.Button btThemAlbum;
+        private System.Windows.Forms.Label lbDsAlbum;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lisAlbum;
+        private System.Windows.Forms.ListBox lisAlbumBH;
     }
 }
 

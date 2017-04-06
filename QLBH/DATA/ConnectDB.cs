@@ -8,7 +8,7 @@ namespace DATA
 {
     public class ConnectDB
     {
-        public SqlConnection con = new SqlConnection("Server = SILVER\\TAN; Database = qlbhat ;Integrated Security= true;");
+        public SqlConnection con = new SqlConnection(@"Server = .\SQLEXPRESS; Database = qlbhat ;Integrated Security= true;");
         public ConnectDB() { }
         public DataSet getAllTable(string tableName)
         {
