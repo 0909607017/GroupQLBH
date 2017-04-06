@@ -92,6 +92,11 @@ namespace QLBH
                     lvw.Items[i - 1].BackColor = Color.LightBlue;
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

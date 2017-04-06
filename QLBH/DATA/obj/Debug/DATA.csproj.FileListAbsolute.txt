@@ -2,3 +2,7 @@ C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\DATA\bin\Debug\DATA.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\DATA\bin\Debug\DATA.pdb
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\DATA\obj\Debug\DATA.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\DATA\obj\Debug\DATA.pdb
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\DATA\bin\Debug\DATA.dll
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\DATA\bin\Debug\DATA.pdb
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\DATA\obj\Debug\DATA.dll
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\DATA\obj\Debug\DATA.pdb
