@@ -18,6 +18,7 @@ namespace QLBH
         }
         private DataTable dtCasi;
         private DataTable dtCasi_Baihat;
+        private DataTable dtTheloai;
         bool danapxong_lstBox = false;
 
 
@@ -34,12 +35,17 @@ namespace QLBH
             lstDanhSachCaSi.ValueMember = "macasi";
 
         }
-
+        private void load_Theloai()
+        {   
+            dtTheloai = new TheLoai_BUS().GetTL();
+            dataGridView2.DataSource = dtTheloai;
+            
+        }
         private void FrmMain_Load(object sender, EventArgs e)
         {
             load_Casi();
             danapxong_lstBox = true;
-      
+            load_Theloai();
         }
 
 
@@ -97,8 +103,32 @@ namespace QLBH
         {
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private string matheloai;
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dataGridView2.CurrentCell.RowIndex;
+            matheloai = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
+            DataTable dt = new DataTable();
+            dt = new TheLoai_BUS().GetBaiHat(matheloai);
+            dataGridView3.DataSource = dt;
+        }
     }
 
-
+    
     
 }

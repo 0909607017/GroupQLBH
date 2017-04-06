@@ -13,12 +13,16 @@ namespace DATA
         public DataSet getAllTable(string tableName)
         {
             SqlDataAdapter da = new SqlDataAdapter("select * from " + tableName, con);
-            
+
             DataSet ds = new DataSet();
-            
+
             da.Fill(ds, tableName);
             return ds;
         }
+
+     
+      
     }
+   
 
 }

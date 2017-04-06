@@ -48,6 +48,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BaiHat = new System.Windows.Forms.TabPage();
             this.TheLoai = new System.Windows.Forms.TabPage();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Album = new System.Windows.Forms.TabPage();
             this.CaSi = new System.Windows.Forms.TabPage();
@@ -63,19 +68,14 @@
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.TheLoai.SuspendLayout();
-            this.CaSi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.CaSi.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -242,6 +242,7 @@
             // 
             // TheLoai
             // 
+            this.TheLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.TheLoai.Controls.Add(this.btnXoa);
             this.TheLoai.Controls.Add(this.btnThem);
             this.TheLoai.Controls.Add(this.dataGridView3);
@@ -254,17 +255,73 @@
             this.TheLoai.Size = new System.Drawing.Size(1105, 476);
             this.TheLoai.TabIndex = 2;
             this.TheLoai.Text = "Thể loại";
-            this.TheLoai.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.Location = new System.Drawing.Point(118, 363);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(106, 82);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem.Location = new System.Drawing.Point(5, 363);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(106, 82);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.GridColor = System.Drawing.Color.White;
+            this.dataGridView3.Location = new System.Drawing.Point(318, 31);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(779, 414);
+            this.dataGridView3.TabIndex = 3;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.Color.White;
+            this.dataGridView2.Location = new System.Drawing.Point(5, 31);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(293, 326);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(300, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(797, 30);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Danh sách bài hát từ thể loại";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 28);
+            this.label4.Size = new System.Drawing.Size(298, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Danh sách thể loại";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Album
@@ -420,58 +477,6 @@
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
             // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(300, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(797, 30);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Danh sách bài hát từ thể loại";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.Color.White;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 31);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(219, 326);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.GridColor = System.Drawing.Color.White;
-            this.dataGridView3.Location = new System.Drawing.Point(294, 31);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(803, 414);
-            this.dataGridView3.TabIndex = 3;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThem.BackgroundImage")));
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(5, 363);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(106, 82);
-            this.btnThem.TabIndex = 4;
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(118, 363);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(106, 82);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -490,10 +495,9 @@
             this.Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.TheLoai.ResumeLayout(false);
-            this.TheLoai.PerformLayout();
-            this.CaSi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.CaSi.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
