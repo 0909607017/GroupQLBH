@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaiHat_BUS.cs" />
+    <Compile Include="Casi_Baihat_BUS.cs" />
     <Compile Include="CaSi_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

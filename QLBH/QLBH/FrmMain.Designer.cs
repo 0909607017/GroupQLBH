@@ -55,6 +55,13 @@
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lvwBaiHat_CaSi = new System.Windows.Forms.ListView();
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblTenCaSi = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtThongTinCaSi = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -71,7 +78,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(643, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -190,7 +197,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(643, 338);
+            this.tabControl1.Size = new System.Drawing.Size(742, 338);
             this.tabControl1.TabIndex = 1;
             // 
             // Home
@@ -253,14 +260,19 @@
             // 
             // CaSi
             // 
-            this.CaSi.BackColor = System.Drawing.Color.YellowGreen;
+            this.CaSi.BackColor = System.Drawing.Color.Gold;
+            this.CaSi.Controls.Add(this.txtThongTinCaSi);
+            this.CaSi.Controls.Add(this.label3);
+            this.CaSi.Controls.Add(this.lblTenCaSi);
+            this.CaSi.Controls.Add(this.lvwBaiHat_CaSi);
+            this.CaSi.Controls.Add(this.label2);
             this.CaSi.Controls.Add(this.lstDanhSachCaSi);
             this.CaSi.Controls.Add(this.label1);
             this.CaSi.ImageIndex = 2;
             this.CaSi.Location = new System.Drawing.Point(4, 44);
             this.CaSi.Margin = new System.Windows.Forms.Padding(2);
             this.CaSi.Name = "CaSi";
-            this.CaSi.Size = new System.Drawing.Size(635, 290);
+            this.CaSi.Size = new System.Drawing.Size(734, 290);
             this.CaSi.TabIndex = 4;
             this.CaSi.Text = "Ca Sĩ";
             // 
@@ -271,16 +283,18 @@
             this.lstDanhSachCaSi.ItemHeight = 24;
             this.lstDanhSachCaSi.Location = new System.Drawing.Point(3, 43);
             this.lstDanhSachCaSi.Name = "lstDanhSachCaSi";
-            this.lstDanhSachCaSi.Size = new System.Drawing.Size(176, 244);
+            this.lstDanhSachCaSi.Size = new System.Drawing.Size(172, 244);
             this.lstDanhSachCaSi.TabIndex = 1;
+            this.lstDanhSachCaSi.SelectedIndexChanged += new System.EventHandler(this.lstDanhSachCaSi_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 40);
+            this.label1.Size = new System.Drawing.Size(172, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Ca Sĩ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,11 +333,75 @@
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(469, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(265, 40);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Các bài hát thể hiện";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvwBaiHat_CaSi
+            // 
+            this.lvwBaiHat_CaSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvwBaiHat_CaSi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader20,
+            this.columnHeader21});
+            this.lvwBaiHat_CaSi.Location = new System.Drawing.Point(466, 43);
+            this.lvwBaiHat_CaSi.Name = "lvwBaiHat_CaSi";
+            this.lvwBaiHat_CaSi.Size = new System.Drawing.Size(268, 244);
+            this.lvwBaiHat_CaSi.TabIndex = 3;
+            this.lvwBaiHat_CaSi.UseCompatibleStateImageBehavior = false;
+            this.lvwBaiHat_CaSi.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Stt";
+            this.columnHeader20.Width = 31;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Tên bài hát";
+            this.columnHeader21.Width = 254;
+            // 
+            // lblTenCaSi
+            // 
+            this.lblTenCaSi.BackColor = System.Drawing.Color.Silver;
+            this.lblTenCaSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTenCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenCaSi.Location = new System.Drawing.Point(208, 3);
+            this.lblTenCaSi.Name = "lblTenCaSi";
+            this.lblTenCaSi.Size = new System.Drawing.Size(235, 37);
+            this.lblTenCaSi.TabIndex = 4;
+            this.lblTenCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(205, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 32);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Thông tin chi tiết";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtThongTinCaSi
+            // 
+            this.txtThongTinCaSi.Location = new System.Drawing.Point(181, 78);
+            this.txtThongTinCaSi.Name = "txtThongTinCaSi";
+            this.txtThongTinCaSi.Size = new System.Drawing.Size(279, 175);
+            this.txtThongTinCaSi.TabIndex = 6;
+            this.txtThongTinCaSi.Text = "";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 362);
+            this.ClientSize = new System.Drawing.Size(742, 362);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -370,6 +448,13 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListBox lstDanhSachCaSi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvwBaiHat_CaSi;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox txtThongTinCaSi;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTenCaSi;
     }
 }
 
