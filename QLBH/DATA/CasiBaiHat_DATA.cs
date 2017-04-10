@@ -21,5 +21,19 @@ namespace DATA
             return ds.Tables["Casi_baihat"];
 
         }
+
+        public DataTable getCasi_BatHat_by_mabaihat(string mabaihat)
+        {
+            SqlCommand cmd = new SqlCommand("select * from CASI_BAIHAT where mabaihat = @mabaihat", objCon.con);
+            cmd.Parameters.Add("@mabaihat", SqlDbType.NVarChar).Value = mabaihat;
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Casi_baihat");
+            return ds.Tables["Casi_baihat"];
+ 
+        }
+
+       
     }
 }

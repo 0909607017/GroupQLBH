@@ -18,6 +18,7 @@ namespace QLBH
         }
         private DataTable dtCasi;
         private DataTable dtCasi_Baihat;
+        private DataTable dtAlbum;
         bool danapxong_lstBox = false;
 
 
@@ -35,18 +36,28 @@ namespace QLBH
 
         }
 
+        private void load_Album()
+        {
+            dtAlbum = new Album_BUS().getAlbum();
+            lisAlbum.DataSource = dtAlbum;
+            lisAlbum.DisplayMember = "tenalbum" ;
+            lisAlbum.ValueMember = "maalbum";
+            
+        }
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
             load_Casi();
+            load_Album();
             danapxong_lstBox = true;
-      
+
         }
 
 
 
 
         //xu li Click button listview listbox
-       
+
         private void lstDanhSachCaSi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (danapxong_lstBox)
@@ -81,6 +92,8 @@ namespace QLBH
 
 
 
+
+
         //Ham` load so thu tu
         private void stt(ListView lvw)
         {
@@ -97,8 +110,42 @@ namespace QLBH
         {
 
         }
+
+
+
+        private void lisAlbum_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (lisAlbum.SelectedItems.Count == 0)
+                return;
+            listView1.Items.Clear();
+            DataTable dt = null;
+            try
+            {
+                dtAlbum = new BaiHat_BUS().getBaiHat_by_maalbum(lisAlbum.SelectedValue.ToString());
+                DataView dv = new DataView(dtAlbum);
+                dv.RowFilter = "maalbum = '" + lisAlbum.SelectedValue + "'";
+
+                foreach (DataRow dr in dtAlbum.Rows)
+                {
+                    DataTable dt1 = new BaiHat_BUS().getBaiHat_by_mabaihat(dr["mabaihat"].ToString());
+                    ListViewItem li = listView1.Items.Add("");
+                    li.SubItems.Add(dt1.Rows[0]["tenbaihat"].ToString());
+                    //dt = new Casi_Baihat_BUS().getCasi_BaiHat_by_mabaihat(dr["mabaihat"].ToString());
+                    
+                    
+                }
+                stt(listView1);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
     }
-
-
     
 }

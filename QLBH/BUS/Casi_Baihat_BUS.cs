@@ -15,5 +15,12 @@ namespace BUS
         {
             return objCasi_baihat.getCasi_BaiHat_by_macasi(macasi);
         }
+
+        public DataTable getCasi_BaiHat_by_mabaihat(string mabaihat)
+        {
+            return objCasi_baihat.getCasi_BatHat_by_mabaihat(mabaihat);
+        }
+    
+        
     }
 }
