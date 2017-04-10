@@ -18,3 +18,4 @@ C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.dll
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.pdb
 C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.pdb
+C:\Users\quang tan\Desktop\quangtan\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.frmThem_Casi.resources

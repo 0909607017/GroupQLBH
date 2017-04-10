@@ -50,18 +50,20 @@
             this.TheLoai = new System.Windows.Forms.TabPage();
             this.Album = new System.Windows.Forms.TabPage();
             this.CaSi = new System.Windows.Forms.TabPage();
+            this.txtThongTinCaSi = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTenCaSi = new System.Windows.Forms.Label();
+            this.lvwBaiHat_CaSi = new System.Windows.Forms.ListView();
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
             this.lstDanhSachCaSi = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lvwBaiHat_CaSi = new System.Windows.Forms.ListView();
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblTenCaSi = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtThongTinCaSi = new System.Windows.Forms.RichTextBox();
+            this.btnThemCaSi = new System.Windows.Forms.Button();
+            this.btnXoaCaSi = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -208,7 +210,7 @@
             this.Home.Margin = new System.Windows.Forms.Padding(2);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(2);
-            this.Home.Size = new System.Drawing.Size(635, 290);
+            this.Home.Size = new System.Drawing.Size(734, 290);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
@@ -221,7 +223,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(631, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(730, 286);
             this.dataGridView1.TabIndex = 0;
             // 
             // BaiHat
@@ -231,7 +233,7 @@
             this.BaiHat.Margin = new System.Windows.Forms.Padding(2);
             this.BaiHat.Name = "BaiHat";
             this.BaiHat.Padding = new System.Windows.Forms.Padding(2);
-            this.BaiHat.Size = new System.Drawing.Size(635, 290);
+            this.BaiHat.Size = new System.Drawing.Size(734, 290);
             this.BaiHat.TabIndex = 1;
             this.BaiHat.Text = "Bài hát";
             this.BaiHat.UseVisualStyleBackColor = true;
@@ -242,7 +244,7 @@
             this.TheLoai.Location = new System.Drawing.Point(4, 44);
             this.TheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.TheLoai.Name = "TheLoai";
-            this.TheLoai.Size = new System.Drawing.Size(635, 290);
+            this.TheLoai.Size = new System.Drawing.Size(734, 290);
             this.TheLoai.TabIndex = 2;
             this.TheLoai.Text = "Thể loại";
             this.TheLoai.UseVisualStyleBackColor = true;
@@ -253,7 +255,7 @@
             this.Album.Location = new System.Drawing.Point(4, 44);
             this.Album.Margin = new System.Windows.Forms.Padding(2);
             this.Album.Name = "Album";
-            this.Album.Size = new System.Drawing.Size(635, 290);
+            this.Album.Size = new System.Drawing.Size(734, 290);
             this.Album.TabIndex = 3;
             this.Album.Text = "Album";
             this.Album.UseVisualStyleBackColor = true;
@@ -261,6 +263,8 @@
             // CaSi
             // 
             this.CaSi.BackColor = System.Drawing.Color.Gold;
+            this.CaSi.Controls.Add(this.btnXoaCaSi);
+            this.CaSi.Controls.Add(this.btnThemCaSi);
             this.CaSi.Controls.Add(this.txtThongTinCaSi);
             this.CaSi.Controls.Add(this.label3);
             this.CaSi.Controls.Add(this.lblTenCaSi);
@@ -276,74 +280,34 @@
             this.CaSi.TabIndex = 4;
             this.CaSi.Text = "Ca Sĩ";
             // 
-            // lstDanhSachCaSi
+            // txtThongTinCaSi
             // 
-            this.lstDanhSachCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstDanhSachCaSi.FormattingEnabled = true;
-            this.lstDanhSachCaSi.ItemHeight = 24;
-            this.lstDanhSachCaSi.Location = new System.Drawing.Point(3, 43);
-            this.lstDanhSachCaSi.Name = "lstDanhSachCaSi";
-            this.lstDanhSachCaSi.Size = new System.Drawing.Size(172, 244);
-            this.lstDanhSachCaSi.TabIndex = 1;
-            this.lstDanhSachCaSi.SelectedIndexChanged += new System.EventHandler(this.lstDanhSachCaSi_SelectedIndexChanged_1);
+            this.txtThongTinCaSi.Location = new System.Drawing.Point(181, 78);
+            this.txtThongTinCaSi.Name = "txtThongTinCaSi";
+            this.txtThongTinCaSi.Size = new System.Drawing.Size(279, 142);
+            this.txtThongTinCaSi.TabIndex = 6;
+            this.txtThongTinCaSi.Text = "";
             // 
-            // label1
+            // label3
             // 
-            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh Sách Ca Sĩ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(205, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 32);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Thông tin chi tiết";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // NhacSi
+            // lblTenCaSi
             // 
-            this.NhacSi.ImageIndex = 4;
-            this.NhacSi.Location = new System.Drawing.Point(4, 44);
-            this.NhacSi.Margin = new System.Windows.Forms.Padding(2);
-            this.NhacSi.Name = "NhacSi";
-            this.NhacSi.Size = new System.Drawing.Size(635, 290);
-            this.NhacSi.TabIndex = 5;
-            this.NhacSi.Text = "Nhạc Sĩ";
-            this.NhacSi.UseVisualStyleBackColor = true;
-            // 
-            // TimKiem
-            // 
-            this.TimKiem.ImageIndex = 6;
-            this.TimKiem.Location = new System.Drawing.Point(4, 44);
-            this.TimKiem.Margin = new System.Windows.Forms.Padding(2);
-            this.TimKiem.Name = "TimKiem";
-            this.TimKiem.Size = new System.Drawing.Size(635, 290);
-            this.TimKiem.TabIndex = 6;
-            this.TimKiem.Text = "Tìm kiếm";
-            this.TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "album.png");
-            this.imageList1.Images.SetKeyName(1, "bài hát.png");
-            this.imageList1.Images.SetKeyName(2, "ca sĩ.ico");
-            this.imageList1.Images.SetKeyName(3, "home.png");
-            this.imageList1.Images.SetKeyName(4, "nhạc sĩ.ico");
-            this.imageList1.Images.SetKeyName(5, "thể loại.png");
-            this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(469, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 40);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Các bài hát thể hiện";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenCaSi.BackColor = System.Drawing.Color.Silver;
+            this.lblTenCaSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTenCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenCaSi.Location = new System.Drawing.Point(208, 3);
+            this.lblTenCaSi.Name = "lblTenCaSi";
+            this.lblTenCaSi.Size = new System.Drawing.Size(235, 37);
+            this.lblTenCaSi.TabIndex = 4;
+            this.lblTenCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lvwBaiHat_CaSi
             // 
@@ -368,34 +332,106 @@
             this.columnHeader21.Text = "Tên bài hát";
             this.columnHeader21.Width = 254;
             // 
-            // lblTenCaSi
+            // label2
             // 
-            this.lblTenCaSi.BackColor = System.Drawing.Color.Silver;
-            this.lblTenCaSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTenCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenCaSi.Location = new System.Drawing.Point(208, 3);
-            this.lblTenCaSi.Name = "lblTenCaSi";
-            this.lblTenCaSi.Size = new System.Drawing.Size(235, 37);
-            this.lblTenCaSi.TabIndex = 4;
-            this.lblTenCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(469, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(265, 40);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Các bài hát thể hiện";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lstDanhSachCaSi
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(205, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 32);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Thông tin chi tiết";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lstDanhSachCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDanhSachCaSi.FormattingEnabled = true;
+            this.lstDanhSachCaSi.ItemHeight = 24;
+            this.lstDanhSachCaSi.Location = new System.Drawing.Point(3, 43);
+            this.lstDanhSachCaSi.Name = "lstDanhSachCaSi";
+            this.lstDanhSachCaSi.Size = new System.Drawing.Size(172, 196);
+            this.lstDanhSachCaSi.TabIndex = 1;
+            this.lstDanhSachCaSi.SelectedIndexChanged += new System.EventHandler(this.lstDanhSachCaSi_SelectedIndexChanged_1);
             // 
-            // txtThongTinCaSi
+            // label1
             // 
-            this.txtThongTinCaSi.Location = new System.Drawing.Point(181, 78);
-            this.txtThongTinCaSi.Name = "txtThongTinCaSi";
-            this.txtThongTinCaSi.Size = new System.Drawing.Size(279, 175);
-            this.txtThongTinCaSi.TabIndex = 6;
-            this.txtThongTinCaSi.Text = "";
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Danh Sách Ca Sĩ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NhacSi
+            // 
+            this.NhacSi.ImageIndex = 4;
+            this.NhacSi.Location = new System.Drawing.Point(4, 44);
+            this.NhacSi.Margin = new System.Windows.Forms.Padding(2);
+            this.NhacSi.Name = "NhacSi";
+            this.NhacSi.Size = new System.Drawing.Size(734, 290);
+            this.NhacSi.TabIndex = 5;
+            this.NhacSi.Text = "Nhạc Sĩ";
+            this.NhacSi.UseVisualStyleBackColor = true;
+            // 
+            // TimKiem
+            // 
+            this.TimKiem.ImageIndex = 6;
+            this.TimKiem.Location = new System.Drawing.Point(4, 44);
+            this.TimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.TimKiem.Name = "TimKiem";
+            this.TimKiem.Size = new System.Drawing.Size(734, 290);
+            this.TimKiem.TabIndex = 6;
+            this.TimKiem.Text = "Tìm kiếm";
+            this.TimKiem.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "album.png");
+            this.imageList1.Images.SetKeyName(1, "bài hát.png");
+            this.imageList1.Images.SetKeyName(2, "ca sĩ.ico");
+            this.imageList1.Images.SetKeyName(3, "home.png");
+            this.imageList1.Images.SetKeyName(4, "nhạc sĩ.ico");
+            this.imageList1.Images.SetKeyName(5, "thể loại.png");
+            this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
+            // 
+            // btnThemCaSi
+            // 
+            this.btnThemCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThemCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnThemCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemCaSi.ImageIndex = 9;
+            this.btnThemCaSi.Location = new System.Drawing.Point(21, 247);
+            this.btnThemCaSi.Name = "btnThemCaSi";
+            this.btnThemCaSi.Size = new System.Drawing.Size(136, 35);
+            this.btnThemCaSi.TabIndex = 7;
+            this.btnThemCaSi.Text = "Ca sĩ mới";
+            this.btnThemCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemCaSi.UseVisualStyleBackColor = false;
+            this.btnThemCaSi.Click += new System.EventHandler(this.btnThemCaSi_Click);
+            // 
+            // btnXoaCaSi
+            // 
+            this.btnXoaCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXoaCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnXoaCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaCaSi.ImageIndex = 10;
+            this.btnXoaCaSi.Location = new System.Drawing.Point(208, 247);
+            this.btnXoaCaSi.Name = "btnXoaCaSi";
+            this.btnXoaCaSi.Size = new System.Drawing.Size(85, 35);
+            this.btnXoaCaSi.TabIndex = 6;
+            this.btnXoaCaSi.Text = "Xóa";
+            this.btnXoaCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoaCaSi.UseVisualStyleBackColor = false;
+            this.btnXoaCaSi.Click += new System.EventHandler(this.btnXoaCaSi_Click);
             // 
             // FrmMain
             // 
@@ -455,6 +491,8 @@
         private System.Windows.Forms.RichTextBox txtThongTinCaSi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTenCaSi;
+        private System.Windows.Forms.Button btnThemCaSi;
+        private System.Windows.Forms.Button btnXoaCaSi;
     }
 }
 
