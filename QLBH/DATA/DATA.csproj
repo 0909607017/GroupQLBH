@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Album_DATA.cs" />
     <Compile Include="BaiHat_DATA.cs" />
     <Compile Include="CasiBaiHat_DATA.cs" />
     <Compile Include="CaSi_DATA.cs" />

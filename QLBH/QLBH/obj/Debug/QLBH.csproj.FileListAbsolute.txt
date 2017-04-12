@@ -30,3 +30,15 @@ C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resourc
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.exe
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.exe
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.exe
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\QLBH.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.dll
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.dll
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\BUS.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\bin\Debug\DATA.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyReference.cache
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache

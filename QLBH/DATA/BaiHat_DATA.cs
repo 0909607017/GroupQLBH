@@ -21,5 +21,19 @@ namespace DATA
 
             return ds.Tables["baihat"];
         }
+
+        public DataTable getBaiHat_by_album(string maalbum)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BAIHAT WHERE maalbum=@maalbum", objCon.con);
+            cmd.Parameters.Add("@maalbum", SqlDbType.NVarChar).Value = maalbum;
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            da.Fill(ds, "chitietbaihat");
+
+            return ds.Tables["chitietbaihat"];
+        }
     }
+
+
 }

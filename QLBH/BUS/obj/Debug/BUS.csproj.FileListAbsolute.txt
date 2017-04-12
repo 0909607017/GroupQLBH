@@ -12,3 +12,10 @@ C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\BUS\bin\Debug\DATA.pdb
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\BUS\obj\Debug\BUS.dll
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\BUS\obj\Debug\BUS.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\bin\Debug\BUS.dll
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\bin\Debug\BUS.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\bin\Debug\DATA.dll
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\bin\Debug\DATA.pdb
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\obj\Debug\BUS.dll
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\BUS\obj\Debug\BUS.pdb

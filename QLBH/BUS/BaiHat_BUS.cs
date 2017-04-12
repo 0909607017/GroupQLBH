@@ -14,5 +14,12 @@ namespace BUS
        {
            return objBaiHat.getBaiHat_by_mabaihat(mabaihat);
        }
+
+       public DataTable getBaiHat_by_maalbum(string maalbum)
+       {
+           return objBaiHat.getBaiHat_by_album(maalbum);
+       }
     }
+
+
 }
