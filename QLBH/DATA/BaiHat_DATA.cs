@@ -29,9 +29,9 @@ namespace DATA
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataSet ds = new DataSet();
-            da.Fill(ds, "chitietbaihat");
+            da.Fill(ds, "ALBUM");
 
-            return ds.Tables["chitietbaihat"];
+            return ds.Tables["ALBUM"];
         }
     }
 

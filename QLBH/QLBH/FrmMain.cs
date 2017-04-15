@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BUS;  
+using BUS;
 
 namespace QLBH
 {
@@ -33,6 +33,7 @@ namespace QLBH
             lstDanhSachCaSi.DataSource = dtCasi;
             lstDanhSachCaSi.DisplayMember = "tencasi";
             lstDanhSachCaSi.ValueMember = "macasi";
+            
 
         }
 
@@ -40,7 +41,7 @@ namespace QLBH
         {
             dtAlbum = new Album_BUS().getAlbum();
             lisAlbum.DataSource = dtAlbum;
-            lisAlbum.DisplayMember = "tenalbum" ;
+            lisAlbum.DisplayMember = "tenalbum";
             lisAlbum.ValueMember = "maalbum";
             
         }
@@ -117,30 +118,51 @@ namespace QLBH
         {
             if (lisAlbum.SelectedItems.Count == 0)
                 return;
-            listView1.Items.Clear();
             DataTable dt = null;
             try
             {
-                dtAlbum = new BaiHat_BUS().getBaiHat_by_maalbum(lisAlbum.SelectedValue.ToString());
-                DataView dv = new DataView(dtAlbum);
-                dv.RowFilter = "maalbum = '" + lisAlbum.SelectedValue + "'";
-
-                foreach (DataRow dr in dtAlbum.Rows)
-                {
-                    DataTable dt1 = new BaiHat_BUS().getBaiHat_by_mabaihat(dr["mabaihat"].ToString());
-                    ListViewItem li = listView1.Items.Add("");
-                    li.SubItems.Add(dt1.Rows[0]["tenbaihat"].ToString());
-                    //dt = new Casi_Baihat_BUS().getCasi_BaiHat_by_mabaihat(dr["mabaihat"].ToString());
-                    
-                    
-                }
-                stt(listView1);
-            }
+                dt = new BaiHat_BUS().getBaiHat_by_maalbum(lisAlbum.SelectedValue.ToString());
+                DataView dv = new DataView(dt);
+                dv.RowFilter = "maalbum = '" + lisAlbum.SelectedItem + "'";
+                ListViewItem li = new ListViewItem();
+                lisAlbum_Baihat.DataSource = dt;
+                lisAlbum_Baihat.DisplayMember = "tenbaihat";
+                lisAlbum_Baihat.ValueMember = "mabaihat";
+           }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btAddAlbum_Click(object sender, EventArgs e)
+        {
+            //lisAlbum.Items.Clear();
+            this.Visible = false;
+            frmThemAlbum f = new frmThemAlbum();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Album();
+        }
+
+        private void btXoaAlbum_Click(object sender, EventArgs e)
+        {
+            if (lisAlbum.SelectedItems.Count == 0)
+                return;
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + lisAlbum.SelectedItem.ToString() + "] và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (drl == DialogResult.Cancel)
+                return;
+
+            string maalbumđangcchon = lisAlbum.SelectedValue.ToString();
+            Album_BUS a = new Album_BUS(maalbumđangcchon);
+            int loi = a.xoaAlbum();
+            if (loi == 0)
+                MessageBox.Show("Đã xóa thành công album [" + maalbumđangcchon + "] ", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("Xóa thất bại album [" + maalbumđangcchon + "] ", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            load_Album();
         }
 
 

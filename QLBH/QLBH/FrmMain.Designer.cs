@@ -55,7 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Album = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btXoaAlbum = new System.Windows.Forms.Button();
             this.btAddAlbum = new System.Windows.Forms.Button();
             this.lisAlbum = new System.Windows.Forms.ListBox();
@@ -74,6 +73,7 @@
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lisAlbum_Baihat = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -341,7 +341,7 @@
             // Album
             // 
             this.Album.BackColor = System.Drawing.Color.Gray;
-            this.Album.Controls.Add(this.listView1);
+            this.Album.Controls.Add(this.lisAlbum_Baihat);
             this.Album.Controls.Add(this.btXoaAlbum);
             this.Album.Controls.Add(this.btAddAlbum);
             this.Album.Controls.Add(this.lisAlbum);
@@ -355,23 +355,16 @@
             this.Album.TabIndex = 3;
             this.Album.Text = "Album";
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(239, 40);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(464, 236);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // btXoaAlbum
             // 
             this.btXoaAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btXoaAlbum.Location = new System.Drawing.Point(119, 218);
+            this.btXoaAlbum.Location = new System.Drawing.Point(132, 218);
             this.btXoaAlbum.Name = "btXoaAlbum";
             this.btXoaAlbum.Size = new System.Drawing.Size(75, 58);
             this.btXoaAlbum.TabIndex = 2;
             this.btXoaAlbum.Text = "Xóa Album";
             this.btXoaAlbum.UseVisualStyleBackColor = true;
+            this.btXoaAlbum.Click += new System.EventHandler(this.btXoaAlbum_Click);
             // 
             // btAddAlbum
             // 
@@ -382,13 +375,14 @@
             this.btAddAlbum.TabIndex = 2;
             this.btAddAlbum.Text = "Thêm Album";
             this.btAddAlbum.UseVisualStyleBackColor = true;
+            this.btAddAlbum.Click += new System.EventHandler(this.btAddAlbum_Click);
             // 
             // lisAlbum
             // 
             this.lisAlbum.FormattingEnabled = true;
             this.lisAlbum.Location = new System.Drawing.Point(22, 40);
             this.lisAlbum.Name = "lisAlbum";
-            this.lisAlbum.Size = new System.Drawing.Size(172, 160);
+            this.lisAlbum.Size = new System.Drawing.Size(185, 173);
             this.lisAlbum.TabIndex = 1;
             this.lisAlbum.SelectedIndexChanged += new System.EventHandler(this.lisAlbum_SelectedIndexChanged_1);
             // 
@@ -397,7 +391,7 @@
             this.lbAlbumBH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbAlbumBH.Location = new System.Drawing.Point(235, 14);
             this.lbAlbumBH.Name = "lbAlbumBH";
-            this.lbAlbumBH.Size = new System.Drawing.Size(468, 33);
+            this.lbAlbumBH.Size = new System.Drawing.Size(468, 23);
             this.lbAlbumBH.TabIndex = 0;
             this.lbAlbumBH.Text = "Các bài hát trong Album";
             // 
@@ -406,7 +400,7 @@
             this.lbAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbAlbum.Location = new System.Drawing.Point(18, 14);
             this.lbAlbum.Name = "lbAlbum";
-            this.lbAlbum.Size = new System.Drawing.Size(176, 33);
+            this.lbAlbum.Size = new System.Drawing.Size(176, 23);
             this.lbAlbum.TabIndex = 0;
             this.lbAlbum.Text = "Danh sách Album";
             // 
@@ -549,6 +543,14 @@
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
             // 
+            // lisAlbum_Baihat
+            // 
+            this.lisAlbum_Baihat.FormattingEnabled = true;
+            this.lisAlbum_Baihat.Location = new System.Drawing.Point(239, 40);
+            this.lisAlbum_Baihat.Name = "lisAlbum_Baihat";
+            this.lisAlbum_Baihat.Size = new System.Drawing.Size(464, 212);
+            this.lisAlbum_Baihat.TabIndex = 4;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,7 +625,7 @@
         private System.Windows.Forms.ListBox lisAlbum;
         private System.Windows.Forms.Label lbAlbumBH;
         private System.Windows.Forms.Label lbAlbum;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListBox lisAlbum_Baihat;
     }
 }
 
