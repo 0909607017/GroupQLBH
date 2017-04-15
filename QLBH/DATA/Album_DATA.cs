@@ -26,6 +26,17 @@ namespace DATA
 
             return ds.Tables["album"];
         }
+
+        public int themalbum(string maalbum, string tenalbum, string namphathanh)
+        {
+            return cn.executeNonQuery("INSERT INTO ALBUM VALUES ('" + maalbum + "','" + tenalbum + "','" + namphathanh + "')");
+        }
+
+        public int xoaalbum(string maalbum)
+        {
+            return cn.executeNonQuery("DELETE * FROM ALBUM WHERE maalbum ='" + maalbum + "'");
+        
+        }
     }
 
     

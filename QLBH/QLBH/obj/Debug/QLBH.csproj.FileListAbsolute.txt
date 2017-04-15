@@ -42,3 +42,4 @@ C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csprojResolveAssemblyRe
 C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.FrmMain.resources
 C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resources.resources
 C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
+C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.frmThemAlbum.resources
