@@ -30,3 +30,4 @@ C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.Properties.Resourc
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.exe
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.pdb
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.ThemTL.resources

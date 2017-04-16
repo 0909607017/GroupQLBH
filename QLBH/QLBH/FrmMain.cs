@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BUS;  
+using BUS;
+using System.Data.SqlClient;
 
 namespace QLBH
 {
@@ -47,9 +48,6 @@ namespace QLBH
             danapxong_lstBox = true;
             load_Theloai();
         }
-
-
-
 
         //xu li Click button listview listbox
        
@@ -104,11 +102,6 @@ namespace QLBH
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -126,6 +119,24 @@ namespace QLBH
             DataTable dt = new DataTable();
             dt = new TheLoai_BUS().GetBaiHat(matheloai);
             dataGridView3.DataSource = dt;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemTL frm = new ThemTL();
+            frm.Show();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlConnection cn = new SqlConnection();
+
+            string xoa = "DELETE FROM THELOAI WHERE matheloai = @id";
+            SqlCommand cmd = new SqlCommand(xoa,cn);
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar, 50, "matheloai");
+            da.DeleteCommand = cmd;
+            load_Theloai();
         }
     }
 

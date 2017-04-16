@@ -24,5 +24,9 @@ namespace DATA
             da.Fill(dt);
             return dt;
         }
+        public int themTheLoai(string matheloai, string tentheloai)
+        {
+            return condb.executeNonQuery("Insert into THELOAI values('" + matheloai + "','" + tentheloai + "')");
+        }
     }
 }

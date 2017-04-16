@@ -19,9 +19,25 @@ namespace DATA
             da.Fill(ds, tableName);
             return ds;
         }
-
-     
-      
+        public int executeNonQuery(string sql)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return 0;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
    
 
