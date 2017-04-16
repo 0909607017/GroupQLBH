@@ -13,7 +13,7 @@ namespace BUS
         private string macasi;
         private string tencasi;
         private string thongtincasi;
-
+       
         public CaSi_BUS() { }
         public CaSi_BUS(string ma, string ten, string thongtin)
         {

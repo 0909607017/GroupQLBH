@@ -50,6 +50,8 @@
             this.TheLoai = new System.Windows.Forms.TabPage();
             this.Album = new System.Windows.Forms.TabPage();
             this.CaSi = new System.Windows.Forms.TabPage();
+            this.btnXoaCaSi = new System.Windows.Forms.Button();
+            this.btnThemCaSi = new System.Windows.Forms.Button();
             this.txtThongTinCaSi = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTenCaSi = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.NhacSi = new System.Windows.Forms.TabPage();
             this.TimKiem = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnThemCaSi = new System.Windows.Forms.Button();
-            this.btnXoaCaSi = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -280,6 +280,38 @@
             this.CaSi.TabIndex = 4;
             this.CaSi.Text = "Ca Sĩ";
             // 
+            // btnXoaCaSi
+            // 
+            this.btnXoaCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXoaCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnXoaCaSi.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCaSi.Image")));
+            this.btnXoaCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaCaSi.Location = new System.Drawing.Point(208, 247);
+            this.btnXoaCaSi.Name = "btnXoaCaSi";
+            this.btnXoaCaSi.Size = new System.Drawing.Size(85, 35);
+            this.btnXoaCaSi.TabIndex = 6;
+            this.btnXoaCaSi.Text = "Xóa";
+            this.btnXoaCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoaCaSi.UseVisualStyleBackColor = false;
+            this.btnXoaCaSi.Click += new System.EventHandler(this.btnXoaCaSi_Click);
+            // 
+            // btnThemCaSi
+            // 
+            this.btnThemCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThemCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnThemCaSi.Image = ((System.Drawing.Image)(resources.GetObject("btnThemCaSi.Image")));
+            this.btnThemCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemCaSi.Location = new System.Drawing.Point(21, 247);
+            this.btnThemCaSi.Name = "btnThemCaSi";
+            this.btnThemCaSi.Size = new System.Drawing.Size(136, 35);
+            this.btnThemCaSi.TabIndex = 7;
+            this.btnThemCaSi.Text = "Ca sĩ mới";
+            this.btnThemCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemCaSi.UseVisualStyleBackColor = false;
+            this.btnThemCaSi.Click += new System.EventHandler(this.btnThemCaSi_Click);
+            // 
             // txtThongTinCaSi
             // 
             this.txtThongTinCaSi.Location = new System.Drawing.Point(181, 78);
@@ -400,38 +432,6 @@
             this.imageList1.Images.SetKeyName(4, "nhạc sĩ.ico");
             this.imageList1.Images.SetKeyName(5, "thể loại.png");
             this.imageList1.Images.SetKeyName(6, "tìm kiếm.png");
-            // 
-            // btnThemCaSi
-            // 
-            this.btnThemCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnThemCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnThemCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemCaSi.ImageIndex = 9;
-            this.btnThemCaSi.Location = new System.Drawing.Point(21, 247);
-            this.btnThemCaSi.Name = "btnThemCaSi";
-            this.btnThemCaSi.Size = new System.Drawing.Size(136, 35);
-            this.btnThemCaSi.TabIndex = 7;
-            this.btnThemCaSi.Text = "Ca sĩ mới";
-            this.btnThemCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemCaSi.UseVisualStyleBackColor = false;
-            this.btnThemCaSi.Click += new System.EventHandler(this.btnThemCaSi_Click);
-            // 
-            // btnXoaCaSi
-            // 
-            this.btnXoaCaSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXoaCaSi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaCaSi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnXoaCaSi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaCaSi.ImageIndex = 10;
-            this.btnXoaCaSi.Location = new System.Drawing.Point(208, 247);
-            this.btnXoaCaSi.Name = "btnXoaCaSi";
-            this.btnXoaCaSi.Size = new System.Drawing.Size(85, 35);
-            this.btnXoaCaSi.TabIndex = 6;
-            this.btnXoaCaSi.Text = "Xóa";
-            this.btnXoaCaSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoaCaSi.UseVisualStyleBackColor = false;
-            this.btnXoaCaSi.Click += new System.EventHandler(this.btnXoaCaSi_Click);
             // 
             // FrmMain
             // 
