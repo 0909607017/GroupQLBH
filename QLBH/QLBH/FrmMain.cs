@@ -19,6 +19,7 @@ namespace QLBH
         private DataTable dtCasi;
         private DataTable dtCasi_Baihat;
         private DataTable dtAlbum;
+        private DataTable dtTheLoai;
         bool danapxong_lstBox = false;
 
 
@@ -48,12 +49,17 @@ namespace QLBH
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            Load_TheLoai();
             load_Casi();
             load_Album();
             danapxong_lstBox = true;
 
         }
-
+        private void Load_TheLoai()
+        {
+            dtTheLoai = new TheLoai_BUS().GetTL();
+            dataGridView2.DataSource = dtTheLoai;
+        }
 
 
 
@@ -166,7 +172,49 @@ namespace QLBH
         }
 
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView2.CurrentCell.RowIndex;
+            matheloaidangchon = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
+            TheLoai_BUS a = new TheLoai_BUS(matheloaiđangcchon);
+            int loi = a.xoaTheLoai();
+            if (loi == 0)
+                MessageBox.Show("Đã xóa thành công");
+            else
+                MessageBox.Show("xóa thất bại");
+            Load_TheLoai();
+        }
 
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private string matheloaidangchon;
+        private string matheloaiđangcchon;
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dataGridView2.CurrentCell.RowIndex;
+            matheloaidangchon = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
+            DataTable dt = new DataTable();
+            dt = new TheLoai_BUS().GetBaiHat(matheloaidangchon);
+            dataGridView3.DataSource = dt;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ThemTheLoai frm = new ThemTheLoai();
+            frm.ShowDialog();
+            this.Visible = true;
+            Load_TheLoai();
+        }
     }
     
 }

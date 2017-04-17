@@ -45,6 +45,7 @@
     <Compile Include="Casi_Baihat_BUS.cs" />
     <Compile Include="CaSi_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLoai_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DATA\DATA.csproj">
