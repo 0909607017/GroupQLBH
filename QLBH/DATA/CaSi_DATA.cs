@@ -14,5 +14,14 @@ namespace DATA
         {
             return objCon.getAllTable("CASI").Tables["CASI"];
         }
+        public int themCaSi(string macasi, string tencasi, string thongtincasi)
+        {
+            return objCon.executeNonQuery("Insert into CASI values('" + macasi + "','" + tencasi + "','" + thongtincasi + "')");
+        }
+        public int xoaCaSi(string macasi)
+        {
+            objCon.executeNonQuery("DELETE FROM BAIHAT WHERE macasi ='" + macasi + "'");
+            return objCon.executeNonQuery("DELETE FROM CASI WHERE macasi ='" + macasi + "'");
+        }
     }
 }

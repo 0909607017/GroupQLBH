@@ -113,6 +113,14 @@ namespace QLBH
             }
         }
 
+        private void loadlai_listview()
+        {
+
+            lvwBaiHat_CaSi.Items.Clear();
+
+
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -214,6 +222,35 @@ namespace QLBH
             frm.ShowDialog();
             this.Visible = true;
             Load_TheLoai();
+        }
+
+        private void btnThemCaSi_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmThem_Casi f = new frmThem_Casi();
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+                load_Casi();
+            this.Visible = true;
+        }
+
+        private void btnXoaCaSi_Click(object sender, EventArgs e)
+        {
+            if (lstDanhSachCaSi.SelectedItems.Count == 0)
+                return;
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Ca sĩ [" + lblTenCaSi.Text + "] và tất cả bài hát do ca sĩ này trình bày không ?", "xóa ca sĩ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (drl == DialogResult.Cancel)
+                return;
+
+            string macasidangchon = lstDanhSachCaSi.SelectedValue.ToString();
+            CaSi_BUS a = new CaSi_BUS(macasidangchon);
+            int loi = a.xoaCasi();
+            if (loi == 0)
+                MessageBox.Show("Đã xóa thành công mã ca sĩ [" + macasidangchon + "] ", "thành công hehe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            load_Casi();
+            loadlai_listview();
         }
     }
     
