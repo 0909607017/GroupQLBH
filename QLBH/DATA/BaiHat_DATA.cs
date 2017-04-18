@@ -33,6 +33,10 @@ namespace DATA
 
             return ds.Tables["ALBUM"];
         }
+        public DataTable getBaiHat()
+        {
+            return objCon.getAllTable("BAIHAT").Tables["BAIHAT"];
+        }
     }
 
 
