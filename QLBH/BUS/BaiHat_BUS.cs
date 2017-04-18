@@ -10,6 +10,10 @@ namespace BUS
    public class BaiHat_BUS
     {
        BaiHat_DATA objBaiHat = new BaiHat_DATA();
+       public DataTable getBaiHat()
+       {
+           return objBaiHat.getBaiHat();
+       }
        public DataTable getBaiHat_by_mabaihat(string mabaihat)
        {
            return objBaiHat.getBaiHat_by_mabaihat(mabaihat);

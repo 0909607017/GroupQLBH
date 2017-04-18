@@ -101,6 +101,47 @@ namespace QLBH
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        private static string[] VietNamChar = new string[]
+        {
+           "aAeEoOuUiIdDyY",
+           "áàạảãâấầậẩẫăắằặẳẵ",
+           "ÁÀẠẢÃÂẤẦẬẨẪĂẮẰẶẲẴ",
+           "éèẹẻẽêếềệểễ",
+           "ÉÈẸẺẼÊẾỀỆỂỄ",
+           "óòọỏõôốồộổỗơớờợởỡ",
+           "ÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠ",
+           "úùụủũưứừựửữ",
+           "ÚÙỤỦŨƯỨỪỰỬỮ",
+           "íìịỉĩ",
+           "ÍÌỊỈĨ",
+           "đ",
+           "Đ",
+           "ýỳỵỷỹ",
+           "ÝỲỴỶỸ"
+        };
+        // ham thay the tieng viet co dau sang k dau
+        public static string ThayThe_Unicode(string strInput)
+        {
+            for (int i = 1; i < VietNamChar.Length; i++)
+            {
+                for (int j = 0; j < VietNamChar[i].Length; j++)
+                {
+                    strInput = strInput.Replace(VietNamChar[i][j], VietNamChar[0][i - 1]);
+                }
+            }
+            return strInput;
+        }
         //Ham` load so thu tu
         private void stt(ListView lvw)
         {
@@ -120,6 +161,22 @@ namespace QLBH
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -251,6 +308,161 @@ namespace QLBH
                 MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             load_Casi();
             loadlai_listview();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Tim` Kiem TAB SEARCH
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            lvwAlbum_TKiem.Items.Clear(); lvwBaiHat_TKiem.Items.Clear(); lvwCaSi_TKiem.Items.Clear(); lvwHangSanXuat.Items.Clear(); lvwLoiBaiHat.Items.Clear();
+
+            if (txtTimKiem.Text.Trim().Equals("") || txtTimKiem.ForeColor != Color.Black)
+            {
+                MessageBox.Show("Bạn hãy nhập nội dung cần tìm!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTimKiem_Click(null, null);
+                txtTimKiem.Focus();
+                return;
+            }
+            //MessageBox.Show("Viết code đi may` ");
+            // lam` tiep o day
+            try
+            {
+               
+                DataTable dtBaiHat_TimKiem = new BaiHat_BUS().getBaiHat();
+                foreach (DataRow dr in dtBaiHat_TimKiem.Rows)
+                {
+                    if (ThayThe_Unicode(dr["tenbaihat"].ToString()).Trim().ToLower().Contains(ThayThe_Unicode(txtTimKiem.Text).Trim().ToLower()))
+                    {
+                        ListViewItem li = lvwBaiHat_TKiem.Items.Add("");
+                        li.SubItems.Add(dr["mabaihat"].ToString());
+                        li.SubItems.Add(dr["tenbaihat"].ToString());
+                        li.Tag = dr["mabaihat"];
+                        //-----------------------------------------------
+
+                    }
+                }
+                if (lvwBaiHat_TKiem.Items.Count == 0)
+                {
+                    ListViewItem i = lvwBaiHat_TKiem.Items.Add("null");
+                    i.SubItems.Add("(Không tìm thấy !!!)"); i.SubItems.Add("(Không tìm thấy !!!)");
+
+                }
+                stt(lvwBaiHat_TKiem); stt(lvwLoiBaiHat);
+
+                //------------------------------------------------------------------------------------------
+                DataTable dtAlbum_timkiem = new Album_BUS().getAlbum();
+                foreach (DataRow dr in dtAlbum_timkiem.Rows)
+                {
+                    if (ThayThe_Unicode(dr["tenalbum"].ToString()).Trim().ToLower().Contains(ThayThe_Unicode(txtTimKiem.Text).Trim().ToLower()) || dr["namphathanh"].ToString().Trim().ToLower().Contains(txtTimKiem.Text.Trim().ToLower()))
+                    {
+                        ListViewItem li = lvwAlbum_TKiem.Items.Add("");
+                        li.SubItems.Add(dr["maalbum"].ToString());
+                        li.SubItems.Add(dr["tenalbum"].ToString());
+                        li.SubItems.Add(dr["namphathanh"].ToString());
+                        li.Tag = dr["maalbum"];
+                    }
+                }
+                if (lvwAlbum_TKiem.Items.Count == 0)
+                {
+                    ListViewItem i = lvwAlbum_TKiem.Items.Add("null");
+                    i.SubItems.Add("(Không tìm thấy !!!)"); i.SubItems.Add("(Không tìm thấy !!!)");
+                }
+                stt(lvwAlbum_TKiem);
+
+                //-------------------------------------------------------------------------------------------------
+                DataTable dtCasi_timkiem = new CaSi_BUS().getCaSi();
+                foreach (DataRow dr in dtCasi_timkiem.Rows)
+                {
+                    if (ThayThe_Unicode(dr["tencasi"].ToString()).Trim().ToLower().Contains(ThayThe_Unicode(txtTimKiem.Text).Trim().ToLower()))
+                    {
+                        ListViewItem li = lvwCaSi_TKiem.Items.Add("");
+                        li.SubItems.Add(dr["macasi"].ToString());
+                        li.SubItems.Add(dr["tencasi"].ToString());
+                        //li.SubItems.Add(dr["namphathanh"].ToString());
+                        li.Tag = dr["macasi"];
+                    }
+                }
+                if (lvwCaSi_TKiem.Items.Count == 0)
+                {
+                    ListViewItem i = lvwCaSi_TKiem.Items.Add("null");
+                    i.SubItems.Add("(Không tìm thấy !!!)"); i.SubItems.Add("(Không tìm thấy !!!)");
+                }
+                stt(lvwCaSi_TKiem);
+
+                //-------------------------------------------------------------------------------------------------
+               
+
+                //-------------------------------------------------------------------------------------------------
+                DataTable dtLoiBH = new BaiHat_BUS().getBaiHat();
+                foreach (DataRow dr in dtLoiBH.Rows)
+                {
+                    if (ThayThe_Unicode(dr["loibaihat"].ToString()).Trim().ToLower().Contains(ThayThe_Unicode(txtTimKiem.Text).Trim().ToLower()))
+                    {
+                        ListViewItem i = lvwLoiBaiHat.Items.Add("");
+                        i.SubItems.Add(dr["tenbaihat"].ToString());
+                        i.SubItems.Add(dr["mabaihat"].ToString());
+                        i.SubItems.Add(dr["loibaihat"].ToString());
+                        i.Tag = dr["mabaihat"];
+                    }
+                }
+                if (lvwLoiBaiHat.Items.Count == 0)
+                {
+                    ListViewItem i = lvwLoiBaiHat.Items.Add("null");
+                    i.SubItems.Add("(Không tìm thấy !!!)"); i.SubItems.Add("(Không tìm thấy !!!)");
+                }
+                stt(lvwLoiBaiHat);
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi ---> " + ex.Message.ToString());
+            }
+            txtTimKiem.AutoCompleteCustomSource.Add(txtTimKiem.Text);
+        }
+
+        private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnTim_Click(null, null);
+        }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            if (!txtTimKiem.Text.Trim().Equals(""))
+                return;
+            txtTimKiem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Italic);
+            txtTimKiem.ForeColor = SystemColors.InactiveCaption;
+            txtTimKiem.Text = "(Gõ nội dung cần tìm ...)";
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimKiem.ForeColor == Color.Black)
+                return;
+            txtTimKiem.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular);
+            txtTimKiem.ForeColor = Color.Black;
+            txtTimKiem.Clear();
         }
     }
     
