@@ -21,7 +21,8 @@ namespace QLBH
         private DataTable dtAlbum;
         private DataTable dtTheLoai;
         bool danapxong_lstBox = false;
-
+        private DataTable dtNhacsi;
+        private DataTable dtBaiHat;
 
 
         private void thôngTinSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,7 +38,14 @@ namespace QLBH
             
 
         }
+        private void Load_NhacSi()
+        {
+            dtNhacsi = new NhacSi_BUS().GetNhacSi();
+            lstNhacSi.DataSource = dtNhacsi;
+            lstNhacSi.DisplayMember = "tentacgia";
+            lstNhacSi.ValueMember = "matacgia";
 
+        }
         private void load_Album()
         {
             dtAlbum = new Album_BUS().getAlbum();
@@ -51,6 +59,7 @@ namespace QLBH
         {
             Load_TheLoai();
             load_Casi();
+            Load_NhacSi();
             load_Album();
             danapxong_lstBox = true;
 
@@ -310,9 +319,69 @@ namespace QLBH
             loadlai_listview();
         }
 
+        
+        private void hienbaihat(DataView dv, ListView lvw)
+        {
+            lvw.Items.Clear();
+            foreach (DataRowView dr in dv)
+            {
+                ListViewItem li = lvw.Items.Add("");
+                li.SubItems.Add(dr["tenbaihat"].ToString());
+            }
+            stt(lvw);
+        }
+        
+        private void lstNhacSi_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (danapxong_lstBox)
+            {
+                if (lstNhacSi.SelectedItems.Count == 0)
+                    return;
+                DataView dv = new DataView(dtNhacsi);
+                dv.RowFilter = "matacgia = '" + lstNhacSi.SelectedValue + "'";
+                string tennhacsi = "";
+                foreach (DataRowView dr in dv)
+                {
+                    tennhacsi = lbtennhacsi.Text = dr["tentacgia"].ToString();
+                    txtthongtinnhacsi.Text = dr["thongtintacgia"].ToString();
+                }
+                if (txtthongtinnhacsi.Text.Trim().Equals(""))
+                    txtthongtinnhacsi.Text = "Chưa có thông tin cho nhạc sĩ : [" + tennhacsi + "]";
+                dtBaiHat = new BaiHat_BUS().getBaiHat();
+                DataView dvBaihat = new DataView(dtBaiHat);
+                dvBaihat.RowFilter = "matacgia = '" + lstNhacSi.SelectedValue + "'";
+                hienbaihat(dvBaihat, lvwsangtac);
+                //dtNhacsi_baihat = new NhacSi_BUS().GetNhacsi_baihat(lstNhacSi.SelectedValue.ToString());
+            }
+        }
+        
+        private void btnThem_NS_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frm_ThemNhacSi f = new frm_ThemNhacSi();
+            f.ShowDialog();
+            this.Visible = true;
+            Load_NhacSi();
+        }
+        
+        private void btnXoa_NS_Click_1(object sender, EventArgs e)
+        {
+            if (lstNhacSi.SelectedItems.Count == 0)
+                return;
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa nhạc sĩ [" + lbtennhacsi.Text + "] và tất cả bài hát do nhạc sĩ này viết không ?", "xóa tác giả", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (drl == DialogResult.Cancel)
+                return;
 
-
-
+            string manhacsidcchon = lstNhacSi.SelectedValue.ToString();
+            NhacSi_BUS a = new NhacSi_BUS(manhacsidcchon);
+            int loi = a.xoaTacGia();
+            if (loi == 0)
+                MessageBox.Show("Đã xóa thành công mã nhạc sĩ [" + manhacsidcchon + "] ", "thành công hehe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("xóa thất bại mã nhạc sĩ [" + manhacsidcchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            Load_NhacSi();
+            loadlai_listview();
+        }
 
 
 
@@ -464,6 +533,8 @@ namespace QLBH
             txtTimKiem.ForeColor = Color.Black;
             txtTimKiem.Clear();
         }
+
+       
     }
     
 }
