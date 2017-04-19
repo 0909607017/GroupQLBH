@@ -16,8 +16,8 @@ namespace QLBH
             InitializeComponent();
         }
 
-    
-    
+
+
 
         private void btnOk_Click_1(object sender, EventArgs e)
         {

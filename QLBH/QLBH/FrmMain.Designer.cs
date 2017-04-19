@@ -113,7 +113,19 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
+            this.btnXoa_NS = new System.Windows.Forms.Button();
+            this.btnThem_NS = new System.Windows.Forms.Button();
+            this.txtthongtinnhacsi = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbtennhacsi = new System.Windows.Forms.Label();
+            this.lvwsangtac = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.lstNhacSi = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.NhacSi.SuspendLayout();
             this.CaSi.SuspendLayout();
             this.Album.SuspendLayout();
             this.TheLoai.SuspendLayout();
@@ -167,56 +179,56 @@
             // albumToolStripMenuItem
             // 
             this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.A)));
+            this.albumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
             this.albumToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.albumToolStripMenuItem.Text = "Album";
             // 
             // thểLoạiToolStripMenuItem
             // 
             this.thểLoạiToolStripMenuItem.Name = "thểLoạiToolStripMenuItem";
-            this.thểLoạiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.T)));
+            this.thểLoạiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
             this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.thểLoạiToolStripMenuItem.Text = "Thể loại";
             // 
             // caSĩToolStripMenuItem
             // 
             this.caSĩToolStripMenuItem.Name = "caSĩToolStripMenuItem";
-            this.caSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.C)));
+            this.caSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
             this.caSĩToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.caSĩToolStripMenuItem.Text = "Ca sĩ";
             // 
             // nhạcSĩToolStripMenuItem
             // 
             this.nhạcSĩToolStripMenuItem.Name = "nhạcSĩToolStripMenuItem";
-            this.nhạcSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.N)));
+            this.nhạcSĩToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
             this.nhạcSĩToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.nhạcSĩToolStripMenuItem.Text = "Nhạc sĩ";
             // 
             // bàiHátToolStripMenuItem
             // 
             this.bàiHátToolStripMenuItem.Name = "bàiHátToolStripMenuItem";
-            this.bàiHátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.B)));
+            this.bàiHátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
             this.bàiHátToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.bàiHátToolStripMenuItem.Text = "Bài hát";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.F)));
+            this.tìmKiếmToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
             this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.E)));
+            this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
@@ -263,6 +275,15 @@
             // 
             // NhacSi
             // 
+            this.NhacSi.Controls.Add(this.btnXoa_NS);
+            this.NhacSi.Controls.Add(this.btnThem_NS);
+            this.NhacSi.Controls.Add(this.txtthongtinnhacsi);
+            this.NhacSi.Controls.Add(this.label6);
+            this.NhacSi.Controls.Add(this.lbtennhacsi);
+            this.NhacSi.Controls.Add(this.lvwsangtac);
+            this.NhacSi.Controls.Add(this.label7);
+            this.NhacSi.Controls.Add(this.lstNhacSi);
+            this.NhacSi.Controls.Add(this.label8);
             this.NhacSi.ImageIndex = 4;
             this.NhacSi.Location = new System.Drawing.Point(4, 44);
             this.NhacSi.Margin = new System.Windows.Forms.Padding(2);
@@ -992,6 +1013,113 @@
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
+            // btnXoa_NS
+            // 
+            this.btnXoa_NS.Location = new System.Drawing.Point(365, 242);
+            this.btnXoa_NS.Name = "btnXoa_NS";
+            this.btnXoa_NS.Size = new System.Drawing.Size(111, 47);
+            this.btnXoa_NS.TabIndex = 22;
+            this.btnXoa_NS.Text = "Xóa Nhạc Sĩ";
+            this.btnXoa_NS.UseVisualStyleBackColor = true;
+            this.btnXoa_NS.Click += new System.EventHandler(this.btnXoa_NS_Click_1);
+            // 
+            // btnThem_NS
+            // 
+            this.btnThem_NS.Location = new System.Drawing.Point(228, 242);
+            this.btnThem_NS.Name = "btnThem_NS";
+            this.btnThem_NS.Size = new System.Drawing.Size(111, 47);
+            this.btnThem_NS.TabIndex = 23;
+            this.btnThem_NS.Text = "Thêm Nhạc Sĩ";
+            this.btnThem_NS.UseVisualStyleBackColor = true;
+            this.btnThem_NS.Click += new System.EventHandler(this.btnThem_NS_Click_1);
+            // 
+            // txtthongtinnhacsi
+            // 
+            this.txtthongtinnhacsi.Location = new System.Drawing.Point(214, 87);
+            this.txtthongtinnhacsi.Name = "txtthongtinnhacsi";
+            this.txtthongtinnhacsi.Size = new System.Drawing.Size(279, 149);
+            this.txtthongtinnhacsi.TabIndex = 21;
+            this.txtthongtinnhacsi.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(238, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 32);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Thông tin chi tiết";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbtennhacsi
+            // 
+            this.lbtennhacsi.BackColor = System.Drawing.Color.Silver;
+            this.lbtennhacsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbtennhacsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtennhacsi.Location = new System.Drawing.Point(241, 12);
+            this.lbtennhacsi.Name = "lbtennhacsi";
+            this.lbtennhacsi.Size = new System.Drawing.Size(235, 37);
+            this.lbtennhacsi.TabIndex = 19;
+            this.lbtennhacsi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvwsangtac
+            // 
+            this.lvwsangtac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvwsangtac.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lvwsangtac.Location = new System.Drawing.Point(499, 52);
+            this.lvwsangtac.Name = "lvwsangtac";
+            this.lvwsangtac.Size = new System.Drawing.Size(268, 244);
+            this.lvwsangtac.TabIndex = 18;
+            this.lvwsangtac.UseCompatibleStateImageBehavior = false;
+            this.lvwsangtac.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Stt";
+            this.columnHeader1.Width = 31;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên bài hát";
+            this.columnHeader2.Width = 254;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(502, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(265, 40);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Bài hát sáng tác";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lstNhacSi
+            // 
+            this.lstNhacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstNhacSi.FormattingEnabled = true;
+            this.lstNhacSi.ItemHeight = 24;
+            this.lstNhacSi.Location = new System.Drawing.Point(36, 52);
+            this.lstNhacSi.Name = "lstNhacSi";
+            this.lstNhacSi.Size = new System.Drawing.Size(172, 244);
+            this.lstNhacSi.TabIndex = 16;
+            this.lstNhacSi.SelectedIndexChanged += new System.EventHandler(this.lstNhacSi_SelectedIndexChanged_1);
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(36, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 40);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Nhạc Sĩ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1007,6 +1135,7 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.NhacSi.ResumeLayout(false);
             this.CaSi.ResumeLayout(false);
             this.Album.ResumeLayout(false);
             this.TheLoai.ResumeLayout(false);
@@ -1120,6 +1249,17 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.Button btnXoa_NS;
+        private System.Windows.Forms.Button btnThem_NS;
+        private System.Windows.Forms.RichTextBox txtthongtinnhacsi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbtennhacsi;
+        private System.Windows.Forms.ListView lvwsangtac;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox lstNhacSi;
+        private System.Windows.Forms.Label label8;
     }
 }
 
