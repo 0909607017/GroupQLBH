@@ -13,5 +13,9 @@ namespace BUS
         {
             return objCaSi.getCasi();
         }
+        public DataTable getCasi_by_macasi(string macasi)
+        {
+            return objCaSi.getCaSi_by_macasi(macasi);
+        }
     }
 }

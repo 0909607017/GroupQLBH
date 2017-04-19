@@ -45,3 +45,5 @@ C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.csproj.GenerateResource
 C:\Users\Danh\Desktop\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.frmThemAlbum.resources
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.frmThemAlbum.resources
 C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.ThemTheLoai.resources
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.ThemBaiHat.resources
+C:\Users\Admin\Desktop\git\GroupQLBH\QLBH\QLBH\obj\Debug\QLBH.SuaBaiHat.resources

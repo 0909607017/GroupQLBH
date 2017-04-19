@@ -56,9 +56,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(1, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 24);
+            this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mã thể loại";
+            this.label2.Text = "Tên thể loại";
             // 
             // label3
             // 
@@ -66,9 +66,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(104, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Tên thể loại";
+            this.label3.Text = "Mã thể loại";
             // 
             // txtTenTL
             // 
@@ -76,6 +76,7 @@
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.Size = new System.Drawing.Size(528, 26);
             this.txtTenTL.TabIndex = 3;
+            this.txtTenTL.TextChanged += new System.EventHandler(this.txtTenTL_TextChanged);
             // 
             // txtMaTL
             // 

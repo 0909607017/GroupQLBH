@@ -57,6 +57,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuaBaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaBaiHat.Designer.cs">
+      <DependentUpon>SuaBaiHat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemBaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemBaiHat.Designer.cs">
+      <DependentUpon>ThemBaiHat.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SuaBaiHat.resx">
+      <DependentUpon>SuaBaiHat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemBaiHat.resx">
+      <DependentUpon>ThemBaiHat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemTheLoai.resx">
       <DependentUpon>ThemTheLoai.cs</DependentUpon>
     </EmbeddedResource>

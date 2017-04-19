@@ -53,5 +53,10 @@ namespace QLBH
                 MessageBox.Show("That bai");
             this.DialogResult = DialogResult.OK;
         }
+
+        private void txtTenTL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

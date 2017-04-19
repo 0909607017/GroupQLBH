@@ -12,6 +12,7 @@ namespace QLBH
 {
     public partial class FrmMain : Form
     {
+
         public FrmMain()
         {
             InitializeComponent();
@@ -20,9 +21,45 @@ namespace QLBH
         private DataTable dtCasi_Baihat;
         private DataTable dtAlbum;
         private DataTable dtTheLoai;
+        private DataTable dtBaihat_Home;
+        private DataTable dtTacGia;
+        private DataTable dtBaiHat_BaiHat;
         bool danapxong_lstBox = false;
 
 
+        private void load_combobox_baihat()
+        {
+
+            cboTL.DataSource = dtTheLoai;
+            cboTL.DisplayMember = "tentheloai";
+            cboTL.ValueMember = "matheloai";
+
+            cboAlbum.DataSource = dtAlbum;
+            cboAlbum.DisplayMember = "tenalbum";
+            cboAlbum.ValueMember = "maalbum";
+
+            cboCasi.DataSource = dtCasi;
+            cboCasi.DisplayMember = "tencasi";
+            cboCasi.ValueMember = "macasi";
+
+            cboTacgia.DataSource = dtTacGia;
+            cboTacgia.DisplayMember = "tentacgia";
+            cboTacgia.ValueMember = "matacgia";
+
+        }
+
+        private void load_Baihat()
+        {
+            dtBaiHat_BaiHat = new BaiHat_BUS().getBaiHat();
+            foreach (DataRow dr in dtBaiHat_BaiHat.Rows)
+            {
+                ListViewItem li = listView2.Items.Add("");
+                li.SubItems.Add(dr["tenbaihat"].ToString());
+                li.SubItems.Add(dr["loibaihat"].ToString());
+                li.Tag = dr["mabaihat"];
+            }
+            stt(listView2);
+        }
 
         private void thôngTinSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -52,6 +89,9 @@ namespace QLBH
             Load_TheLoai();
             load_Casi();
             load_Album();
+            load_BaiHat_home();
+            load_Baihat();
+            load_combobox_baihat();
             danapxong_lstBox = true;
 
         }
@@ -63,8 +103,7 @@ namespace QLBH
 
 
 
-        //xu li Click button listview listbox
-
+      
         private void lstDanhSachCaSi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (danapxong_lstBox)
@@ -101,8 +140,7 @@ namespace QLBH
 
 
 
-        //Ham` load so thu tu
-        private void stt(ListView lvw)
+              private void stt(ListView lvw)
         {
             for (int i = 1; i <= lvw.Items.Count; i++)
             {
@@ -156,7 +194,9 @@ namespace QLBH
         {
             if (lisAlbum.SelectedItems.Count == 0)
                 return;
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + lisAlbum.SelectedItem.ToString() + "] và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DataRowView dv = (DataRowView)lisAlbum.SelectedItem;
+            string tenalbum = dv["tenalbum"].ToString();
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album " + tenalbum + " và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -164,9 +204,9 @@ namespace QLBH
             Album_BUS a = new Album_BUS(maalbumđangcchon);
             int loi = a.xoaAlbum();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công album [" + maalbumđangcchon + "] ", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công album " + tenalbum + " ", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("Xóa thất bại album [" + maalbumđangcchon + "] ", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xóa thất bại album " + tenalbum + " ", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             load_Album();
         }
@@ -175,8 +215,8 @@ namespace QLBH
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int index = dataGridView2.CurrentCell.RowIndex;
-            matheloaidangchon = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
-            TheLoai_BUS a = new TheLoai_BUS(matheloaiđangcchon);
+            String matheloaidangchon = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
+            TheLoai_BUS a = new TheLoai_BUS(matheloaidangchon);
             int loi = a.xoaTheLoai();
             if (loi == 0)
                 MessageBox.Show("Đã xóa thành công");
@@ -185,18 +225,33 @@ namespace QLBH
             Load_TheLoai();
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void load_BaiHat_home()
         {
-
-        }
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dtBaihat_Home = new BaiHat_BUS().getBaiHat_home();
+            foreach (DataRow dr in dtBaihat_Home.Rows)
+            {
+                ListViewItem li = listView1.Items.Add("");
+                li.SubItems.Add(dr["tenbaihat"].ToString());
+                li.SubItems.Add(dr["tenalbum"].ToString());
+                DataTable dt = new Casi_Baihat_BUS().getCasi_BaiHat_by_mabaihat(dr["mabaihat"].ToString());
+                string cac_casi = "";
+                foreach (DataRow r in dt.Rows)
+                {
+                    DataTable dtcasi = new CaSi_BUS().getCasi_by_macasi(r["macasi"].ToString());
+                    foreach (DataRow r1 in dtcasi.Rows)
+                    {
+                        cac_casi += r1["tencasi"].ToString() + ", ";
+                    }
+                }
+                li.SubItems.Add(cac_casi + "...");
+                li.SubItems.Add(dr["tentheloai"].ToString());
+                li.SubItems.Add(dr["loibaihat"].ToString());
+                li.Tag = dr["mabaihat"];
+            }
+            stt(listView1);
         }
 
         private string matheloaidangchon;
-        private string matheloaiđangcchon;
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -214,6 +269,107 @@ namespace QLBH
             frm.ShowDialog();
             this.Visible = true;
             Load_TheLoai();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void hienbaihat_cbo(DataView dv)
+        {
+            foreach (DataRowView dr in dv)
+            {
+                ListViewItem li = listView2.Items.Add("");
+                li.SubItems.Add(dr["tenbaihat"].ToString());
+                li.SubItems.Add(dr["loibaihat"].ToString());
+                li.Tag = dr["mabaihat"];
+            }
+            stt(listView2);
+        }
+
+        private void cboTL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView2.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaiHat_BaiHat);
+            dvBaiHat.RowFilter = "matheloai = '" + cboTL.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
+        }
+
+        private void cboAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView2.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaiHat_BaiHat);
+            dvBaiHat.RowFilter = "maalbum = '" + cboAlbum.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
+        }
+
+        private void cboCasi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView2.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaiHat_BaiHat);
+            dvBaiHat.RowFilter = "macasi = '" + cboCasi.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
+        }
+
+        private void cboTacgia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView2.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaiHat_BaiHat);
+            dvBaiHat.RowFilter = "matacgia = '" + cboTacgia.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ThemBaiHat f = new ThemBaiHat();
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+                load_Baihat();
+            this.Visible = true;
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+                return;
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa bài hát [" + listView2.SelectedItems[0].SubItems[1].Text + "]  không ?", "xóa bài hát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (drl == DialogResult.Cancel)
+                return;
+
+            string mabaihatdcchon = listView2.SelectedItems[0].Tag.ToString();
+            BaiHat_BUS a = new BaiHat_BUS(mabaihatdcchon);
+            int loi = a.xoaBaiHat();
+            if (loi == 0)
+                MessageBox.Show("Đã xóa thành công mã bài hát [" + mabaihatdcchon + "] ", "thành công hehe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("xóa thất bại mã bài hát [" + mabaihatdcchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            load_Baihat();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //if (listView2.SelectedItems.Count == 0)
+            //    return;
+            //this.Visible = false;
+            //SuaBaiHat f = new SuaBaiHat();
+            //f.ma = listView2.SelectedItems[0].Tag.ToString();
+            //f.ten = listView2.SelectedItems[0].SubItems[1].Text;
+            //f.loibaihat = listView2.SelectedItems[0].SubItems[2].Text;
+            //f.matheloai = cboTL.SelectedValue.ToString();
+            //f.maalbum = cboAlbum.SelectedValue.ToString();
+            //f.macasi = cboCasi.SelectedValue.ToString();
+            //f.matacgia = cboTacgia.SelectedValue.ToString();
+
+            //f.ShowDialog();
+            //if (f.DialogResult == DialogResult.OK)
+            //    load_Baihat();
+            //this.Visible = true;
         }
     }
     

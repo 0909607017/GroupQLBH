@@ -9,10 +9,10 @@ namespace BUS
     public class TheLoai_BUS
     {
         TheLoai_DATA theloai = new TheLoai_DATA();
-        private string matheloaiđangcchon;
+        public string matheloaiđangcchon;
 
-        private string matheloai { get; set; }
-        private string tentheloai { get; set; }
+        public string matheloai { get; set; }
+        public string tentheloai { get; set; }
 
         public TheLoai_BUS(string ma, string ten)
         {

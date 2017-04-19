@@ -9,6 +9,9 @@ namespace DATA
 {
     public class TheLoai_DATA
     {
+        DataSet ds;
+        SqlCommand cmd;
+        SqlDataAdapter da;
         ConnectDB condb = new ConnectDB();
         public DataTable getTheLoai()
         {
@@ -16,7 +19,7 @@ namespace DATA
         }
         public DataTable PhuongThucCuaPhuc(string matheloai)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM BAIHAT WHERE matheloai = @matheloai", condb.con);
+            cmd = new SqlCommand("SELECT * FROM BAIHAT WHERE matheloai = @matheloai", condb.con);
             cmd.Parameters.Add("@matheloai", SqlDbType.NVarChar).Value = matheloai;
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;

@@ -35,6 +35,14 @@ namespace DATA
                 return 1;
             }
         }
+        public DataSet getBaiHat_home()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select mabaihat,tenbaihat,BAIHAT.maalbum,tenalbum,ALBUM.maalbum,BAIHAT.matheloai,THELOAI.matheloai,tentheloai,loibaihat from BAIHAT,ALBUM,THELOAI where BAIHAT.maalbum=ALBUM.maalbum and BAIHAT.matheloai=THELOAI.matheloai", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "baihat_home");
+
+            return ds;
+        }
     }
 
 }
