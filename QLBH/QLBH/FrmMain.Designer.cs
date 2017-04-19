@@ -45,6 +45,17 @@
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.NhacSi = new System.Windows.Forms.TabPage();
+            this.btnXoa_NS = new System.Windows.Forms.Button();
+            this.btnThem_NS = new System.Windows.Forms.Button();
+            this.txtthongtinnhacsi = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbtennhacsi = new System.Windows.Forms.Label();
+            this.lvwsangtac = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.lstNhacSi = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.CaSi = new System.Windows.Forms.TabPage();
             this.btnXoaCaSi = new System.Windows.Forms.Button();
             this.btnThemCaSi = new System.Windows.Forms.Button();
@@ -110,20 +121,16 @@
             this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lvwNhacsi_Tkiem = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
-            this.btnXoa_NS = new System.Windows.Forms.Button();
-            this.btnThem_NS = new System.Windows.Forms.Button();
-            this.txtthongtinnhacsi = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbtennhacsi = new System.Windows.Forms.Label();
-            this.lvwsangtac = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
-            this.lstNhacSi = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.NhacSi.SuspendLayout();
             this.CaSi.SuspendLayout();
@@ -146,6 +153,8 @@
             this.groupBox15.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -292,6 +301,113 @@
             this.NhacSi.TabIndex = 5;
             this.NhacSi.Text = "Nhạc Sĩ";
             this.NhacSi.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa_NS
+            // 
+            this.btnXoa_NS.Location = new System.Drawing.Point(365, 242);
+            this.btnXoa_NS.Name = "btnXoa_NS";
+            this.btnXoa_NS.Size = new System.Drawing.Size(111, 47);
+            this.btnXoa_NS.TabIndex = 22;
+            this.btnXoa_NS.Text = "Xóa Nhạc Sĩ";
+            this.btnXoa_NS.UseVisualStyleBackColor = true;
+            this.btnXoa_NS.Click += new System.EventHandler(this.btnXoa_NS_Click_1);
+            // 
+            // btnThem_NS
+            // 
+            this.btnThem_NS.Location = new System.Drawing.Point(228, 242);
+            this.btnThem_NS.Name = "btnThem_NS";
+            this.btnThem_NS.Size = new System.Drawing.Size(111, 47);
+            this.btnThem_NS.TabIndex = 23;
+            this.btnThem_NS.Text = "Thêm Nhạc Sĩ";
+            this.btnThem_NS.UseVisualStyleBackColor = true;
+            this.btnThem_NS.Click += new System.EventHandler(this.btnThem_NS_Click_1);
+            // 
+            // txtthongtinnhacsi
+            // 
+            this.txtthongtinnhacsi.Location = new System.Drawing.Point(214, 87);
+            this.txtthongtinnhacsi.Name = "txtthongtinnhacsi";
+            this.txtthongtinnhacsi.Size = new System.Drawing.Size(279, 149);
+            this.txtthongtinnhacsi.TabIndex = 21;
+            this.txtthongtinnhacsi.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(238, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 32);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Thông tin chi tiết";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbtennhacsi
+            // 
+            this.lbtennhacsi.BackColor = System.Drawing.Color.Silver;
+            this.lbtennhacsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbtennhacsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtennhacsi.Location = new System.Drawing.Point(241, 12);
+            this.lbtennhacsi.Name = "lbtennhacsi";
+            this.lbtennhacsi.Size = new System.Drawing.Size(235, 37);
+            this.lbtennhacsi.TabIndex = 19;
+            this.lbtennhacsi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvwsangtac
+            // 
+            this.lvwsangtac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvwsangtac.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lvwsangtac.Location = new System.Drawing.Point(499, 52);
+            this.lvwsangtac.Name = "lvwsangtac";
+            this.lvwsangtac.Size = new System.Drawing.Size(268, 244);
+            this.lvwsangtac.TabIndex = 18;
+            this.lvwsangtac.UseCompatibleStateImageBehavior = false;
+            this.lvwsangtac.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Stt";
+            this.columnHeader1.Width = 31;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên bài hát";
+            this.columnHeader2.Width = 254;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(502, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(265, 40);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Bài hát sáng tác";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lstNhacSi
+            // 
+            this.lstNhacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstNhacSi.FormattingEnabled = true;
+            this.lstNhacSi.ItemHeight = 24;
+            this.lstNhacSi.Location = new System.Drawing.Point(36, 52);
+            this.lstNhacSi.Name = "lstNhacSi";
+            this.lstNhacSi.Size = new System.Drawing.Size(172, 244);
+            this.lstNhacSi.TabIndex = 16;
+            this.lstNhacSi.SelectedIndexChanged += new System.EventHandler(this.lstNhacSi_SelectedIndexChanged_1);
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(36, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 40);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Nhạc Sĩ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CaSi
             // 
@@ -674,6 +790,7 @@
             this.tabControl2.Controls.Add(this.tabPage11);
             this.tabControl2.Controls.Add(this.tabPage12);
             this.tabControl2.Controls.Add(this.tabPage13);
+            this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Location = new System.Drawing.Point(40, 53);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -972,6 +1089,67 @@
             this.columnHeader48.Text = "Thông tin nhà sản xuất";
             this.columnHeader48.Width = 279;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(636, 226);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "NHẠC SĨ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lvwNhacsi_Tkiem);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(6, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(598, 215);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Kết quả tìm kiếm theo Nhạc Sĩ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lvwNhacsi_Tkiem
+            // 
+            this.lvwNhacsi_Tkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvwNhacsi_Tkiem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvwNhacsi_Tkiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwNhacsi_Tkiem.FullRowSelect = true;
+            this.lvwNhacsi_Tkiem.GridLines = true;
+            this.lvwNhacsi_Tkiem.Location = new System.Drawing.Point(3, 16);
+            this.lvwNhacsi_Tkiem.Name = "lvwNhacsi_Tkiem";
+            this.lvwNhacsi_Tkiem.Size = new System.Drawing.Size(592, 196);
+            this.lvwNhacsi_Tkiem.TabIndex = 0;
+            this.lvwNhacsi_Tkiem.UseCompatibleStateImageBehavior = false;
+            this.lvwNhacsi_Tkiem.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Stt";
+            this.columnHeader3.Width = 45;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Mã nhạc sĩ";
+            this.columnHeader4.Width = 113;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Tên nhạc sĩ";
+            this.columnHeader5.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Thông tin nhạc sĩ";
+            this.columnHeader6.Width = 279;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1013,113 +1191,6 @@
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // btnXoa_NS
-            // 
-            this.btnXoa_NS.Location = new System.Drawing.Point(365, 242);
-            this.btnXoa_NS.Name = "btnXoa_NS";
-            this.btnXoa_NS.Size = new System.Drawing.Size(111, 47);
-            this.btnXoa_NS.TabIndex = 22;
-            this.btnXoa_NS.Text = "Xóa Nhạc Sĩ";
-            this.btnXoa_NS.UseVisualStyleBackColor = true;
-            this.btnXoa_NS.Click += new System.EventHandler(this.btnXoa_NS_Click_1);
-            // 
-            // btnThem_NS
-            // 
-            this.btnThem_NS.Location = new System.Drawing.Point(228, 242);
-            this.btnThem_NS.Name = "btnThem_NS";
-            this.btnThem_NS.Size = new System.Drawing.Size(111, 47);
-            this.btnThem_NS.TabIndex = 23;
-            this.btnThem_NS.Text = "Thêm Nhạc Sĩ";
-            this.btnThem_NS.UseVisualStyleBackColor = true;
-            this.btnThem_NS.Click += new System.EventHandler(this.btnThem_NS_Click_1);
-            // 
-            // txtthongtinnhacsi
-            // 
-            this.txtthongtinnhacsi.Location = new System.Drawing.Point(214, 87);
-            this.txtthongtinnhacsi.Name = "txtthongtinnhacsi";
-            this.txtthongtinnhacsi.Size = new System.Drawing.Size(279, 149);
-            this.txtthongtinnhacsi.TabIndex = 21;
-            this.txtthongtinnhacsi.Text = "";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(238, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 32);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Thông tin chi tiết";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbtennhacsi
-            // 
-            this.lbtennhacsi.BackColor = System.Drawing.Color.Silver;
-            this.lbtennhacsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbtennhacsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtennhacsi.Location = new System.Drawing.Point(241, 12);
-            this.lbtennhacsi.Name = "lbtennhacsi";
-            this.lbtennhacsi.Size = new System.Drawing.Size(235, 37);
-            this.lbtennhacsi.TabIndex = 19;
-            this.lbtennhacsi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lvwsangtac
-            // 
-            this.lvwsangtac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lvwsangtac.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lvwsangtac.Location = new System.Drawing.Point(499, 52);
-            this.lvwsangtac.Name = "lvwsangtac";
-            this.lvwsangtac.Size = new System.Drawing.Size(268, 244);
-            this.lvwsangtac.TabIndex = 18;
-            this.lvwsangtac.UseCompatibleStateImageBehavior = false;
-            this.lvwsangtac.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Stt";
-            this.columnHeader1.Width = 31;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên bài hát";
-            this.columnHeader2.Width = 254;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(502, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(265, 40);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Bài hát sáng tác";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lstNhacSi
-            // 
-            this.lstNhacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstNhacSi.FormattingEnabled = true;
-            this.lstNhacSi.ItemHeight = 24;
-            this.lstNhacSi.Location = new System.Drawing.Point(36, 52);
-            this.lstNhacSi.Name = "lstNhacSi";
-            this.lstNhacSi.Size = new System.Drawing.Size(172, 244);
-            this.lstNhacSi.TabIndex = 16;
-            this.lstNhacSi.SelectedIndexChanged += new System.EventHandler(this.lstNhacSi_SelectedIndexChanged_1);
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(36, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 40);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Nhạc Sĩ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1157,6 +1228,8 @@
             this.groupBox15.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
@@ -1260,6 +1333,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox lstNhacSi;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListView lvwNhacsi_Tkiem;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 
