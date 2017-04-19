@@ -479,8 +479,25 @@ namespace QLBH
                 stt(lvwCaSi_TKiem);
 
                 //-------------------------------------------------------------------------------------------------
-               
 
+                DataTable dtNhacsi_timkiem = new NhacSi_BUS().GetNhacSi();
+                foreach (DataRow dr in dtNhacsi_timkiem.Rows)
+                {
+                    if (ThayThe_Unicode(dr["tentacgia"].ToString()).Trim().ToLower().Contains(ThayThe_Unicode(txtTimKiem.Text).Trim().ToLower()))
+                    {
+                        ListViewItem li = lvwNhacsi_Tkiem.Items.Add("");
+                        li.SubItems.Add(dr["matacgia"].ToString());
+                        li.SubItems.Add(dr["tentacgia"].ToString());
+                        li.SubItems.Add(dr["thongtintacgia"].ToString());
+                        li.Tag = dr["matacgia"];
+                    }
+                }
+                if (lvwNhacsi_Tkiem.Items.Count == 0)
+                {
+                    ListViewItem i = lvwNhacsi_Tkiem.Items.Add("null");
+                    i.SubItems.Add("(Không tìm thấy !!!)"); i.SubItems.Add("(Không tìm thấy !!!)");
+                }
+                stt(lvwNhacsi_Tkiem);
                 //-------------------------------------------------------------------------------------------------
                 DataTable dtLoiBH = new BaiHat_BUS().getBaiHat();
                 foreach (DataRow dr in dtLoiBH.Rows)
@@ -534,7 +551,7 @@ namespace QLBH
             txtTimKiem.Clear();
         }
 
-       
+        private void groupBox1_Enter(object sender, EventArgs e)  { }
     }
     
 }
