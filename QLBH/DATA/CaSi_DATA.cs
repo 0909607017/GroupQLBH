@@ -14,6 +14,19 @@ namespace DATA
         {
             return objCon.getAllTable("CASI").Tables["CASI"];
         }
+
+        public DataTable getCaSi_by_macasi(string macasi)
+        {
+
+            SqlCommand cmd = new SqlCommand("select * from CASI where macasi = @macasi", objCon.con);
+            cmd.Parameters.Add("@macasi", SqlDbType.NVarChar, 50).Value = macasi;
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            da.Fill(ds, "casi");
+            return ds.Tables["casi"];
+        }
+
         public int themCaSi(string macasi, string tencasi, string thongtincasi)
         {
             return objCon.executeNonQuery("Insert into CASI values('" + macasi + "','" + tencasi + "','" + thongtincasi + "')");
