@@ -61,6 +61,18 @@
     <Compile Include="frmThem_Casi.Designer.cs">
       <DependentUpon>frmThem_Casi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_SuaBaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaBaiHat.Designer.cs">
+      <DependentUpon>frm_SuaBaiHat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemBaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemBaiHat.Designer.cs">
+      <DependentUpon>frm_ThemBaiHat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ThemNhacSi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThem_Casi.resx">
       <DependentUpon>frmThem_Casi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaBaiHat.resx">
+      <DependentUpon>frm_SuaBaiHat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemBaiHat.resx">
+      <DependentUpon>frm_ThemBaiHat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemNhacSi.resx">
       <DependentUpon>frm_ThemNhacSi.cs</DependentUpon>
