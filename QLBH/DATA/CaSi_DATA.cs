@@ -36,5 +36,10 @@ namespace DATA
             objCon.executeNonQuery("DELETE FROM BAIHAT WHERE macasi ='" + macasi + "'");
             return objCon.executeNonQuery("DELETE FROM CASI WHERE macasi ='" + macasi + "'");
         }
+
+        public int capnhatCaSi(string macasi, string tencasi, string thongtincasi)
+        {
+            return objCon.executeNonQuery("UPDATE CASI SET tencasi ='" + tencasi + "', thongtincasi = '" + thongtincasi + "' WHERE macasi ='" + macasi + "'");
+        }
     }
 }

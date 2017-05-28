@@ -38,7 +38,7 @@ namespace DATA
             return objCon.getAllTable("BAIHAT").Tables["BAIHAT"];
         }
 
-        public DataTable getBaiHat_by_cbo(string matheloai, string maalbum, string macasi, string matacgia, string mahangsanxuat)
+        public DataTable getBaiHat_by_cbo(string matheloai, string maalbum, string macasi, string matacgia)
         {
 
             SqlCommand cmd = new SqlCommand("select * from BAIHAT where matheloai=@matheloai,maalbum=@maalbum,macasi=@macasi,matacgia=@matacgia", objCon.con);

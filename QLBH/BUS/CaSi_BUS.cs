@@ -86,5 +86,11 @@ namespace BUS
         {
             return objCaSi.getCaSi_by_macasi(macasi);
         }
+
+        public int capnhapCaSi()
+        {
+
+            return objCaSi.capnhatCaSi(macasi, tencasi, thongtincasi);
+        }
     }
 }

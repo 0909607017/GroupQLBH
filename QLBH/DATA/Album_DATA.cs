@@ -37,6 +37,10 @@ namespace DATA
             return cn.executeNonQuery("DELETE * FROM ALBUM WHERE maalbum ='" + maalbum + "'");
         
         }
+        public int capnhatAlbum(string maalbum, string tenalbum, string namphathanh)
+        {
+            return cn.executeNonQuery("UPDATE ALBUM SET tenalbum ='" + tenalbum + "', namphathanh = '" + namphathanh + "' WHERE maalbum ='" + maalbum + "'");
+        }
     }
 
     

@@ -26,6 +26,19 @@ namespace QLBH
         private DataTable dtBaiHat;
         private DataTable dtBaihat_Home;
 
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            Load_combobox_baihat();
+            Load_Baihat_cbo();
+            
+            Load_TheLoai();
+            load_Casi();
+            Load_NhacSi();
+            load_BaiHat_Home();
+            load_Album();
+            danapxong_lstBox = true;
+
+        }
 
         private void thôngTinSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -33,31 +46,53 @@ namespace QLBH
         }
 
 
+        int pageNumber = 1;
+        int totalRecord = 0;
+        int numberRecord = 50;
+        List<BAIHAT> LoadRecord(int page, int recordNum)
+        {
+
+            List<BAIHAT> list = new List<BAIHAT>();
+
+            using (DataClasses1DataContext myDP = new DataClasses1DataContext())
+            {
+                list = myDP.BAIHATs.Skip((page - 1) * recordNum).Take(numberRecord).ToList();
+            }
+
+            return list;
+        }
+
         private void load_BaiHat_Home()
         {
-            dtBaihat_Home = new BaiHat_BUS().getBaiHat_home();
-            foreach (DataRow dr in dtBaihat_Home.Rows)
+            //dtBaihat_Home = new BaiHat_BUS().getBaiHat_home();
+            //foreach (DataRow dr in dtBaihat_Home.Rows)
+            //{
+            //    ListViewItem li = lisBaihat_Home.Items.Add("");
+            //    li.SubItems.Add(dr["tenbaihat"].ToString());
+            //    li.SubItems.Add(dr["tenalbum"].ToString());
+            //    DataTable dt = new Casi_Baihat_BUS().getCasi_BaiHat_by_mabaihat(dr["mabaihat"].ToString());
+            //    string cac_casi = "";
+            //    foreach (DataRow r in dt.Rows)
+            //    {
+            //        DataTable dtcasi = new CaSi_BUS().getCasi_by_macasi(r["macasi"].ToString());
+            //        foreach (DataRow r1 in dtcasi.Rows)
+            //        {
+            //            cac_casi += r1["tencasi"].ToString() + ", ";
+            //        }
+            //    }
+            //    li.SubItems.Add(cac_casi + "...");
+            //    li.SubItems.Add(dr["tentheloai"].ToString());
+            //    li.SubItems.Add(dr["loibaihat"].ToString());
+            //    li.Tag = dr["mabaihat"];
+            //}
+            //stt(lisBaihat_Home);
+            using (DataClasses1DataContext myDP = new DataClasses1DataContext())
             {
-                ListViewItem li = lisBaihat_Home.Items.Add("");
-                li.SubItems.Add(dr["tenbaihat"].ToString());
-                li.SubItems.Add(dr["tenalbum"].ToString());
-                DataTable dt = new Casi_Baihat_BUS().getCasi_BaiHat_by_mabaihat(dr["mabaihat"].ToString());
-                string cac_casi = "";
-                foreach (DataRow r in dt.Rows)
-                {
-                    DataTable dtcasi = new CaSi_BUS().getCasi_by_macasi(r["macasi"].ToString());
-                    foreach (DataRow r1 in dtcasi.Rows)
-                    {
-                        cac_casi += r1["tencasi"].ToString() + ", ";
-                    }
-                }
-                li.SubItems.Add(cac_casi + "...");
-                li.SubItems.Add(dr["tentheloai"].ToString());
-                li.SubItems.Add(dr["loibaihat"].ToString());
-                li.Tag = dr["mabaihat"];
+                totalRecord = myDP.BAIHATs.Count();
             }
-            stt(lisBaihat_Home);
+            dataGridView1.DataSource = LoadRecord(pageNumber, numberRecord);
         }
+    
         private void load_Casi()
         {
             dtCasi = new CaSi_BUS().getCaSi();
@@ -84,17 +119,7 @@ namespace QLBH
             
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            Load_Baihat_cbo();
-            Load_combobox_baihat();
-            Load_TheLoai();
-            load_Casi();
-            Load_NhacSi();
-            load_Album();
-            danapxong_lstBox = true;
-
-        }
+  
         private void Load_TheLoai()
         {
             dtTheLoai = new TheLoai_BUS().GetTL();
@@ -264,6 +289,7 @@ namespace QLBH
             DataTable dt = null;
             try
             {
+
                 dt = new BaiHat_BUS().getBaiHat_by_maalbum(lisAlbum.SelectedValue.ToString());
                 DataView dv = new DataView(dt);
                 dv.RowFilter = "maalbum = '" + lisAlbum.SelectedItem + "'";
@@ -293,7 +319,9 @@ namespace QLBH
         {
             if (lisAlbum.SelectedItems.Count == 0)
                 return;
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + lisAlbum.SelectedItem.ToString() + "] và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DataRowView dv = (DataRowView)lisAlbum.SelectedItem;
+            String tenalbum = dv["tenalbum"].ToString();
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + tenalbum + "] và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -629,34 +657,34 @@ namespace QLBH
         }
         private void cboTL_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lisBaihat.Items.Clear();
-            DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            dvBaiHat.RowFilter = "matheloai = '" + cboTL.SelectedValue.ToString() + "'";
-            hienbaihat_cbo(dvBaiHat);
+            //lisBaihat.Items.Clear();
+            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            //dvBaiHat.RowFilter = "matheloai = '" + cboTL.SelectedValue.ToString() + "'";
+            //hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboAlbum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lisBaihat.Items.Clear();
-            DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            dvBaiHat.RowFilter = "maalbum = '" + cboAlbum.SelectedValue.ToString() + "'";
-            hienbaihat_cbo(dvBaiHat);
+            //lisBaihat.Items.Clear();
+            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            //dvBaiHat.RowFilter = "maalbum = '" + cboAlbum.SelectedValue.ToString() + "'";
+            //hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboCasi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lisBaihat.Items.Clear();
-            DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            dvBaiHat.RowFilter = "macasi = '" + cboCasi.SelectedValue.ToString() + "'";
-            hienbaihat_cbo(dvBaiHat);
+            //lisBaihat.Items.Clear();
+            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            //dvBaiHat.RowFilter = "macasi = '" + cboCasi.SelectedValue.ToString() + "'";
+            //hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboTacgia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lisBaihat.Items.Clear();
-            DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            dvBaiHat.RowFilter = "matacgia = '" + cboTacgia.SelectedValue.ToString() + "'";
-            hienbaihat_cbo(dvBaiHat);
+            //lisBaihat.Items.Clear();
+            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            //dvBaiHat.RowFilter = "matacgia = '" + cboTacgia.SelectedValue.ToString() + "'";
+            //hienbaihat_cbo(dvBaiHat);
         }
 
         private void btthembh_Click(object sender, EventArgs e)
@@ -708,6 +736,129 @@ namespace QLBH
                 Load_Baihat_cbo();
             this.Visible = true;
         }
+
+        private void lisBaihat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lisBaihat.SelectedItems.Count == 0)
+                return;
+            DataTable dtBH = new BaiHat_BUS().getBaiHat_by_mabaihat(lisBaihat.SelectedItems[0].Tag.ToString());
+            DataView dv = new DataView(dtBH);
+            foreach (DataRow dr in dtBH.Rows)
+            {
+                cboTL.SelectedValue = dr["matheloai"].ToString();
+
+                cboAlbum.SelectedValue = dr["maalbum"].ToString();
+                cboCasi.SelectedValue = dr["macasi"].ToString();
+                cboTacgia.SelectedValue = dr["matacgia"].ToString();
+            }
+        }
+
+        private void lisBaihat_DoubleClick(object sender, EventArgs e)
+        {
+            btsuabh_Click(sender, e);
+        }
+
+        private void bthienbh_Click(object sender, EventArgs e)
+        {
+            lisBaihat.Items.Clear();
+            Load_Baihat_cbo();
+        }
+
+        private void lisAlbum_DoubleClick(object sender, EventArgs e)
+        {
+            if (lisAlbum.SelectedItems.Count == 0)
+                return;
+            this.Visible = false;
+            DataRowView dv = (DataRowView)lisAlbum.SelectedItem;
+            String tenalbum = dv["tenalbum"].ToString();
+            String namphathanh = dv["namphathanh"].ToString();
+            frm_SuaAlbum f = new frm_SuaAlbum();
+            // gán 
+            f.ma = lisAlbum.SelectedValue.ToString();
+            f.ten = tenalbum;
+            f.namphathanh = namphathanh;
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+                loadlai_listview();
+            this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (pageNumber > 1)
+            {
+                pageNumber--;
+                dataGridView1.DataSource = LoadRecord(pageNumber, numberRecord);
+                lbsotrang.Text = pageNumber.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Đã xuống trang cuối cùng");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (pageNumber - 1 < totalRecord / numberRecord)
+            {
+                pageNumber++;
+                dataGridView1.DataSource = LoadRecord(pageNumber, numberRecord);
+                lbsotrang.Text = pageNumber.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Đã lên trang cuối cùng");
+            }
+        }
+
+        private void lstDanhSachCaSi_DoubleClick(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DataRowView dv = (DataRowView)lstDanhSachCaSi.SelectedItem;
+            String tencasi = dv["tencasi"].ToString();
+            String thongtincasi = dv["thongtincasi"].ToString();
+            frm_SuaCaSi f = new frm_SuaCaSi();
+            f.ma = lstDanhSachCaSi.SelectedValue.ToString();
+            f.ten = tencasi;
+            if (txtThongTinCaSi.Text.Contains("Chưa có thông tin cho ca sĩ"))
+                f.thongtin = "";
+            else
+                f.thongtin = thongtincasi;
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                lstDanhSachCaSi.DataSource = null;
+                load_Casi();
+            }
+            this.Visible = true;
+        }
+
+        private void lstNhacSi_DoubleClick(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DataRowView dv = (DataRowView)lstNhacSi.SelectedItem;
+            String tennhacsi = dv["tentacgia"].ToString();
+            String thongtintacgia = dv["thongtintacgia"].ToString();
+            frm_SuaTacGia f = new frm_SuaTacGia();
+            f.ma = lstNhacSi.SelectedValue.ToString();
+            f.ten = tennhacsi;
+            if (txtthongtinnhacsi.Text.Contains("Chưa có thông tin tác giả "))
+                f.thongtin = "";
+            else
+                f.thongtin = thongtintacgia;
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                lstDanhSachCaSi.DataSource = null;
+                Load_NhacSi();
+            }
+            this.Visible = true;
+        }
+
+
+
+
 
 
     }
