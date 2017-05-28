@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="qlbhat" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=qlbhat;Integrated Security=True" SettingsObjectName="QLBH.Properties.Settings" SettingsPropertyName="qlbhatConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BAIHAT" Member="BAIHATs">
+    <Type Name="BAIHAT">
+      <Column Name="mabaihat" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenbaihat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="matheloai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maalbum" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="macasi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="matacgia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mahangsanxuat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="loibaihat" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

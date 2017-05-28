@@ -28,7 +28,34 @@ namespace QLBH
 
         private void frm_SuaBaiHat_Load(object sender, EventArgs e)
         {
+            txtMaBaiHat.Text = ma; txtTenBaiHat.Text = ten; txtLoiBaiHat.Text = loibaihat;
+            txtTenBaiHat.SelectAll(); txtTenBaiHat.Focus();
+            this.Text = "Cập nhật bài hát [" + ten + "]";
 
+            dtTheLoai = new TheLoai_BUS().GetTL();
+            cboTheLoai.DataSource = dtTheLoai;
+            cboTheLoai.DisplayMember = "tentheloai";
+            cboTheLoai.ValueMember = "matheloai";
+
+            dtAlbum = new Album_BUS().getAlbum();
+            cboAlbum.DataSource = dtAlbum;
+            cboAlbum.DisplayMember = "tenalbum";
+            cboAlbum.ValueMember = "maalbum";
+
+            dtCasi = new CaSi_BUS().getCaSi();
+            cboCasi.DataSource = dtCasi;
+            cboCasi.DisplayMember = "tencasi";
+            cboCasi.ValueMember = "macasi";
+
+            dtTacGia = new NhacSi_BUS().GetNhacSi();
+            cbotacGia.DataSource = dtTacGia;
+            cbotacGia.DisplayMember = "tentacgia";
+            cbotacGia.ValueMember = "matacgia";
+
+            cboTheLoai.SelectedValue = matheloai;
+            cboAlbum.SelectedValue = maalbum;
+            cboCasi.SelectedValue = macasi;
+            cbotacGia.SelectedValue = matacgia;
         }
 
         private void btnOk_Click(object sender, EventArgs e)

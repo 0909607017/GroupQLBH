@@ -76,7 +76,7 @@
             // 
             // txtMaBaiHat
             // 
-            this.txtMaBaiHat.BackColor = System.Drawing.Color.White;
+            this.txtMaBaiHat.BackColor = System.Drawing.Color.Silver;
             this.txtMaBaiHat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaBaiHat.Enabled = false;
             this.txtMaBaiHat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

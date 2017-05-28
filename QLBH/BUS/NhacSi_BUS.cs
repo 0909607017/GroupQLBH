@@ -76,7 +76,7 @@ namespace BUS
         {
             return objNhacSi.xoaNhacSi(matacgia);
         }
-        public int capnhapCaSi()
+        public int capnhatNhacSi()
         {
             return objNhacSi.capnhatNhacSi(matacgia, tentacgia, thongtintacgia);
         }

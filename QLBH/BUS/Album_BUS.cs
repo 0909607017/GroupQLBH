@@ -47,7 +47,10 @@ namespace BUS
         {
             return objAlbum.xoaalbum(maalbum);
         }
-
+        public int capnhatalbum()
+        {
+            return objAlbum.capnhatAlbum(maalbum, tenalbum, namphathanh);
+        }
        
     }
 }

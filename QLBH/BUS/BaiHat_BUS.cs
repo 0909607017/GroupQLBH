@@ -17,7 +17,6 @@ namespace BUS
        private string maalbum;
        private string macasi;
        private string matacgia;
-       private string mahangsanxuat;
        private string loibaihatt { get; set; }
 
        public BaiHat_BUS() { }
@@ -72,9 +71,9 @@ namespace BUS
            return objBaiHat.capnhatBaiHat(mabaihat, tenbaihat, matheloai, maalbum, macasi, matacgia,loibaihatt);
        }
 
-       public DataTable getBaiHat_cbo(string matheloai, string maalbum, string macasi, string matacgia, string mahangsanxuat)
+       public DataTable getBaiHat_cbo(string matheloai, string maalbum, string macasi, string matacgia)
        {
-           return objBaiHat.getBaiHat_by_cbo(matheloai, maalbum, macasi, matacgia, mahangsanxuat);
+           return objBaiHat.getBaiHat_by_cbo(matheloai, maalbum, macasi, matacgia);
        }
 
        public DataTable getBaiHat_cbo(string matheloai, string maalbum)
