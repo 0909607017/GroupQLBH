@@ -725,12 +725,14 @@ namespace QLBH
                 return;
             this.Visible = false;
 
+            
+
             frm_SuaBaiHat f = new frm_SuaBaiHat();
 
-            f.ShowDialog(); 
+            f.ShowDialog();
             f.ma = lisBaihat.SelectedItems[0].Tag.ToString();
-            f.ten = lisBaihat.SelectedItems[1].Tag.ToString(); ;
-            f.loibaihat = lisBaihat.SelectedItems[2].Tag.ToString(); 
+            f.ten = lisBaihat.SelectedItems[0].SubItems[1].Text;
+            f.loibaihat = lisBaihat.SelectedItems[0].SubItems[2].Text;
             f.matheloai = cboTL.SelectedValue.ToString();
             f.maalbum = cboAlbum.SelectedValue.ToString();
             f.macasi = cboCasi.SelectedValue.ToString();
@@ -760,6 +762,10 @@ namespace QLBH
 
         private void bthienbh_Click(object sender, EventArgs e)
         {
+            cboAlbum.Text = "";
+            cboCasi.Text = "";
+            cboTacgia.Text = "";
+            cboTL.Text = "";
             lisBaihat.Items.Clear();
             Load_Baihat_cbo();
         }
