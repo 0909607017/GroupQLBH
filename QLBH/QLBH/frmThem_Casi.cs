@@ -64,5 +64,10 @@ namespace QLBH
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void frmThem_Casi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

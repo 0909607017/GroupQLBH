@@ -57,7 +57,7 @@ namespace QLBH
 
         private void frmThemAlbum_Load(object sender, EventArgs e)
         {
-
+            tbmaalbum.Focus();
         }
     }
 }

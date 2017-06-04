@@ -34,7 +34,7 @@ namespace DATA
 
         public int xoaalbum(string maalbum)
         {
-            return cn.executeNonQuery("DELETE * FROM ALBUM WHERE maalbum ='" + maalbum + "'");
+            return cn.executeNonQuery("DELETE FROM ALBUM WHERE maalbum ='" + maalbum + "'");
         
         }
         public int capnhatAlbum(string maalbum, string tenalbum, string namphathanh)

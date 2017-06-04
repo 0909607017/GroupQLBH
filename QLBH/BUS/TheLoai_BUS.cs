@@ -47,7 +47,7 @@ namespace BUS
         }
         public int xoaTheLoai()
         {
-            return theloai.xoaTheLoai(matheloai, tentheloai);
+            return theloai.xoaTheLoai(matheloai);
         }
     }
 }

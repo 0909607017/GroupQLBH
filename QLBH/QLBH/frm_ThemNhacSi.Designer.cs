@@ -176,6 +176,7 @@
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
             this.Name = "frm_ThemNhacSi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ThemNhacSi";
             this.ResumeLayout(false);
             this.PerformLayout();

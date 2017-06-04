@@ -51,7 +51,7 @@ namespace QLBH
             if (resutl == 0)
                 MessageBox.Show("Cập nhật thành công album [" + txtTenAlbum.Text + "] với mã album là [" + txtMaAlbum.Text + "]");
             else
-                MessageBox.Show("That bai");
+                MessageBox.Show("Thất bại");
 
             this.DialogResult = DialogResult.OK;
         }

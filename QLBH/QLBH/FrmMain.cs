@@ -28,14 +28,15 @@ namespace QLBH
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            Load_combobox_baihat();
-            Load_Baihat_cbo();
+            
             
             Load_TheLoai();
             load_Casi();
             Load_NhacSi();
             load_BaiHat_Home();
             load_Album();
+            Load_combobox_baihat();
+            Load_Baihat_cbo();
             danapxong_lstBox = true;
 
         }
@@ -48,7 +49,7 @@ namespace QLBH
 
         int pageNumber = 1;
         int totalRecord = 0;
-        int numberRecord = 50;
+        int numberRecord = 60;
         List<BAIHAT> LoadRecord(int page, int recordNum)
         {
 
@@ -321,7 +322,7 @@ namespace QLBH
                 return;
             DataRowView dv = (DataRowView)lisAlbum.SelectedItem;
             String tenalbum = dv["tenalbum"].ToString();
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + tenalbum + "] và tất cả bài hát trong album này không ?", "Waring", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Album [" + tenalbum + "] và tất cả bài hát trong album này không ?", "Waring!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -341,12 +342,15 @@ namespace QLBH
         {
             int index = dataGridView2.CurrentCell.RowIndex;
             matheloaidangchon = dataGridView2.Rows[index].Cells[0].Value.ToString().Trim();
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Thể loại " + matheloaidangchon + " này không ?", "Waring!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (drl == DialogResult.Cancel)
+                return;
             TheLoai_BUS a = new TheLoai_BUS(matheloaiđangcchon);
             int loi = a.xoaTheLoai();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công");
+                MessageBox.Show("Đã xóa thành công","Thành công",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             else
-                MessageBox.Show("xóa thất bại");
+                MessageBox.Show("Xóa thất bại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             Load_TheLoai();
         }
 
@@ -395,7 +399,7 @@ namespace QLBH
         {
             if (lstDanhSachCaSi.SelectedItems.Count == 0)
                 return;
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Ca sĩ [" + lblTenCaSi.Text + "] và tất cả bài hát do ca sĩ này trình bày không ?", "xóa ca sĩ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa Ca sĩ [" + lblTenCaSi.Text + "] và tất cả bài hát do ca sĩ này trình bày không ?", "Xóa ca sĩ!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -403,9 +407,9 @@ namespace QLBH
             CaSi_BUS a = new CaSi_BUS(macasidangchon);
             int loi = a.xoaCasi();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công mã ca sĩ [" + macasidangchon + "] ", "thành công hehe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công mã ca sĩ [" + macasidangchon + "] ", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             load_Casi();
             loadlai_listview();
         }
@@ -459,7 +463,7 @@ namespace QLBH
         {
             if (lstNhacSi.SelectedItems.Count == 0)
                 return;
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa nhạc sĩ [" + lbtennhacsi.Text + "] và tất cả bài hát do nhạc sĩ này viết không ?", "xóa tác giả", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa nhạc sĩ [" + lbtennhacsi.Text + "] và tất cả bài hát do nhạc sĩ này viết không ?", "Xóa tác giả!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -467,9 +471,9 @@ namespace QLBH
             NhacSi_BUS a = new NhacSi_BUS(manhacsidcchon);
             int loi = a.xoaTacGia();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công mã nhạc sĩ [" + manhacsidcchon + "] ", "thành công hehe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công mã nhạc sĩ [" + manhacsidcchon + "] ", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("xóa thất bại mã nhạc sĩ [" + manhacsidcchon + "] ", "thất bại huhu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("xóa thất bại mã nhạc sĩ [" + manhacsidcchon + "] ", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             Load_NhacSi();
             loadlai_listview();
         }
@@ -657,34 +661,34 @@ namespace QLBH
         }
         private void cboTL_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lisBaihat.Items.Clear();
-            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            //dvBaiHat.RowFilter = "matheloai = '" + cboTL.SelectedValue.ToString() + "'";
-            //hienbaihat_cbo(dvBaiHat);
+            lisBaihat.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            dvBaiHat.RowFilter = "matheloai = '" + cboTL.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboAlbum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lisBaihat.Items.Clear();
-            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            //dvBaiHat.RowFilter = "maalbum = '" + cboAlbum.SelectedValue.ToString() + "'";
-            //hienbaihat_cbo(dvBaiHat);
+            lisBaihat.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            dvBaiHat.RowFilter = "maalbum = '" + cboAlbum.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboCasi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lisBaihat.Items.Clear();
-            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            //dvBaiHat.RowFilter = "macasi = '" + cboCasi.SelectedValue.ToString() + "'";
-            //hienbaihat_cbo(dvBaiHat);
+            lisBaihat.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            dvBaiHat.RowFilter = "macasi = '" + cboCasi.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
         }
 
         private void cboTacgia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lisBaihat.Items.Clear();
-            //DataView dvBaiHat = new DataView(dtBaihat_cbo);
-            //dvBaiHat.RowFilter = "matacgia = '" + cboTacgia.SelectedValue.ToString() + "'";
-            //hienbaihat_cbo(dvBaiHat);
+            lisBaihat.Items.Clear();
+            DataView dvBaiHat = new DataView(dtBaihat_cbo);
+            dvBaiHat.RowFilter = "matacgia = '" + cboTacgia.SelectedValue.ToString() + "'";
+            hienbaihat_cbo(dvBaiHat);
         }
 
         private void btthembh_Click(object sender, EventArgs e)
@@ -720,12 +724,13 @@ namespace QLBH
             if (lisBaihat.SelectedItems.Count == 0)
                 return;
             this.Visible = false;
+
             frm_SuaBaiHat f = new frm_SuaBaiHat();
 
-            f.ShowDialog();
+            f.ShowDialog(); 
             f.ma = lisBaihat.SelectedItems[0].Tag.ToString();
-            f.ten = lisBaihat.SelectedItems[0].SubItems[1].Text;
-            f.loibaihat = lisBaihat.SelectedItems[0].SubItems[2].Text;
+            f.ten = lisBaihat.SelectedItems[1].Tag.ToString(); ;
+            f.loibaihat = lisBaihat.SelectedItems[2].Tag.ToString(); 
             f.matheloai = cboTL.SelectedValue.ToString();
             f.maalbum = cboAlbum.SelectedValue.ToString();
             f.macasi = cboCasi.SelectedValue.ToString();
@@ -751,11 +756,6 @@ namespace QLBH
                 cboCasi.SelectedValue = dr["macasi"].ToString();
                 cboTacgia.SelectedValue = dr["matacgia"].ToString();
             }
-        }
-
-        private void lisBaihat_DoubleClick(object sender, EventArgs e)
-        {
-            btsuabh_Click(sender, e);
         }
 
         private void bthienbh_Click(object sender, EventArgs e)
@@ -794,7 +794,7 @@ namespace QLBH
             }
             else
             {
-                MessageBox.Show("Đã xuống trang cuối cùng");
+                MessageBox.Show("Đã xuống trang cuối cùng","Waring!!!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
 
@@ -808,7 +808,7 @@ namespace QLBH
             }
             else
             {
-                MessageBox.Show("Đã lên trang cuối cùng");
+                MessageBox.Show("Đã lên trang cuối cùng","Waring!!!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
 
@@ -856,6 +856,63 @@ namespace QLBH
             this.Visible = true;
         }
 
+        private void baihatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(baihatToolStripMenuItem))
+                tabControl1.SelectedIndex = 1;
+        }
+
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(thểLoạiToolStripMenuItem))
+                tabControl1.SelectedIndex = 2;
+        }
+
+        private void albumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(albumToolStripMenuItem))
+                tabControl1.SelectedIndex = 3;
+        }
+
+        private void casiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(casiToolStripMenuItem))
+                tabControl1.SelectedIndex = 4;
+        }
+
+        private void nhacsiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(nhacsiToolStripMenuItem))
+                tabControl1.SelectedIndex = 5;
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            if (tsmi.Equals(tìmKiếmToolStripMenuItem))
+                tabControl1.SelectedIndex = 6;
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void cácChứcNăngChưaHoànThànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chưa hoàn thành phần tìm kiếm bằng tên viết tắt", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+
+
+ 
 
 
 
