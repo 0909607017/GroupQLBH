@@ -437,7 +437,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(605, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(253, 40);
+            this.label7.Size = new System.Drawing.Size(253, 38);
             this.label7.TabIndex = 17;
             this.label7.Text = "Bài hát sáng tác";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -461,7 +461,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(25, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(181, 40);
+            this.label8.Size = new System.Drawing.Size(195, 40);
             this.label8.TabIndex = 15;
             this.label8.Text = "Nhạc Sĩ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -521,18 +521,18 @@
             // txtThongTinCaSi
             // 
             this.txtThongTinCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtThongTinCaSi.Location = new System.Drawing.Point(219, 85);
+            this.txtThongTinCaSi.Location = new System.Drawing.Point(232, 85);
             this.txtThongTinCaSi.Name = "txtThongTinCaSi";
-            this.txtThongTinCaSi.Size = new System.Drawing.Size(348, 200);
+            this.txtThongTinCaSi.Size = new System.Drawing.Size(348, 194);
             this.txtThongTinCaSi.TabIndex = 6;
             this.txtThongTinCaSi.Text = "";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(278, 48);
+            this.label3.Location = new System.Drawing.Point(280, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 32);
+            this.label3.Size = new System.Drawing.Size(239, 34);
             this.label3.TabIndex = 5;
             this.label3.Text = "Thông tin chi tiết";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -542,7 +542,7 @@
             this.lblTenCaSi.BackColor = System.Drawing.Color.Silver;
             this.lblTenCaSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTenCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenCaSi.Location = new System.Drawing.Point(275, 6);
+            this.lblTenCaSi.Location = new System.Drawing.Point(284, 11);
             this.lblTenCaSi.Name = "lblTenCaSi";
             this.lblTenCaSi.Size = new System.Drawing.Size(235, 37);
             this.lblTenCaSi.TabIndex = 4;
@@ -554,9 +554,9 @@
             this.lvwBaiHat_CaSi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader20,
             this.columnHeader21});
-            this.lvwBaiHat_CaSi.Location = new System.Drawing.Point(585, 59);
+            this.lvwBaiHat_CaSi.Location = new System.Drawing.Point(602, 59);
             this.lvwBaiHat_CaSi.Name = "lvwBaiHat_CaSi";
-            this.lvwBaiHat_CaSi.Size = new System.Drawing.Size(268, 278);
+            this.lvwBaiHat_CaSi.Size = new System.Drawing.Size(259, 278);
             this.lvwBaiHat_CaSi.TabIndex = 3;
             this.lvwBaiHat_CaSi.UseCompatibleStateImageBehavior = false;
             this.lvwBaiHat_CaSi.View = System.Windows.Forms.View.Details;
@@ -576,9 +576,9 @@
             this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(584, 6);
+            this.label2.Location = new System.Drawing.Point(602, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 40);
+            this.label2.Size = new System.Drawing.Size(259, 40);
             this.label2.TabIndex = 2;
             this.label2.Text = "Các bài hát thể hiện";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -588,9 +588,9 @@
             this.lstDanhSachCaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDanhSachCaSi.FormattingEnabled = true;
             this.lstDanhSachCaSi.ItemHeight = 24;
-            this.lstDanhSachCaSi.Location = new System.Drawing.Point(29, 59);
+            this.lstDanhSachCaSi.Location = new System.Drawing.Point(20, 59);
             this.lstDanhSachCaSi.Name = "lstDanhSachCaSi";
-            this.lstDanhSachCaSi.Size = new System.Drawing.Size(172, 268);
+            this.lstDanhSachCaSi.Size = new System.Drawing.Size(191, 268);
             this.lstDanhSachCaSi.TabIndex = 1;
             this.lstDanhSachCaSi.SelectedIndexChanged += new System.EventHandler(this.lstDanhSachCaSi_SelectedIndexChanged_1);
             this.lstDanhSachCaSi.DoubleClick += new System.EventHandler(this.lstDanhSachCaSi_DoubleClick);
@@ -600,9 +600,9 @@
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 6);
+            this.label1.Location = new System.Drawing.Point(20, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 40);
+            this.label1.Size = new System.Drawing.Size(191, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Ca Sĩ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -629,7 +629,7 @@
             this.lisAlbum_Baihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lisAlbum_Baihat.FormattingEnabled = true;
             this.lisAlbum_Baihat.ItemHeight = 16;
-            this.lisAlbum_Baihat.Location = new System.Drawing.Point(239, 40);
+            this.lisAlbum_Baihat.Location = new System.Drawing.Point(239, 38);
             this.lisAlbum_Baihat.Name = "lisAlbum_Baihat";
             this.lisAlbum_Baihat.Size = new System.Drawing.Size(621, 292);
             this.lisAlbum_Baihat.TabIndex = 4;
@@ -743,11 +743,11 @@
             this.Column7,
             this.Column8});
             this.dataGridView3.GridColor = System.Drawing.Color.White;
-            this.dataGridView3.Location = new System.Drawing.Point(217, 33);
+            this.dataGridView3.Location = new System.Drawing.Point(238, 33);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(645, 299);
+            this.dataGridView3.Size = new System.Drawing.Size(624, 299);
             this.dataGridView3.TabIndex = 3;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
@@ -800,7 +800,7 @@
             this.Column7.DataPropertyName = "loibaihat";
             this.Column7.HeaderText = "Lời bài hát";
             this.Column7.Name = "Column7";
-            this.Column7.Width = 425;
+            this.Column7.Width = 400;
             // 
             // Column8
             // 
@@ -823,7 +823,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(179, 221);
+            this.dataGridView2.Size = new System.Drawing.Size(186, 221);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -843,10 +843,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(213, 7);
+            this.label5.Location = new System.Drawing.Point(238, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(531, 19);
+            this.label5.Size = new System.Drawing.Size(624, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "Danh sách bài hát từ thể loại";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1064,7 +1064,7 @@
             // columnHeader15
             // 
             this.columnHeader15.Text = "Lời bài hát";
-            this.columnHeader15.Width = 425;
+            this.columnHeader15.Width = 429;
             // 
             // btsuabh
             // 
@@ -1870,14 +1870,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbtenct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -1886,6 +1878,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
 
