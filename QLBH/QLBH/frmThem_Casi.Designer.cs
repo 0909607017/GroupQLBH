@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 366);
+            this.ClientSize = new System.Drawing.Size(563, 366);
             this.Controls.Add(this.txtThongTin);
             this.Controls.Add(this.txtTenCasi);
             this.Controls.Add(this.txtMaCasi);
@@ -177,7 +177,9 @@
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
             this.Name = "frmThem_Casi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThem_Casi";
+            this.Load += new System.EventHandler(this.frmThem_Casi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

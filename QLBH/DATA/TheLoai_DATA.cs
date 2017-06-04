@@ -28,9 +28,8 @@ namespace DATA
         {
             return condb.executeNonQuery("Insert into THELOAI values('" + matheloai + "','" + tentheloai + "')");
         }
-        public int xoaTheLoai(string matheloai, string tentheloai)
-        {
-            condb.executeNonQuery("DELETE FROM BAIHAT WHERE matheloai ='" + matheloai + "'");
+        public int xoaTheLoai(string matheloai)
+        {          
             return condb.executeNonQuery("DELETE FROM THELOAI WHERE matheloai ='" + matheloai + "'");
         }
     }

@@ -21,7 +21,11 @@ namespace QLBH
 
         private void frm_SuaTacGia_Load(object sender, EventArgs e)
         {
-
+            txtMaTacGia.Text = ma;
+            txtTenTacGia.Text = ten;
+            txtThongTin.Text = thongtin;
+            this.Text = "Cập nhập Tác Giả [" + ten + "]";
+            txtTenTacGia.SelectAll(); txtTenTacGia.Focus();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -54,14 +58,16 @@ namespace QLBH
             if (resutl == 0)
                 MessageBox.Show("Cập nhật thành công tác giả [" + txtTenTacGia.Text + "] với mã tác giả là [" + txtMaTacGia.Text + "]");
             else
-                MessageBox.Show("That bai");
+                MessageBox.Show("Thất bại");
 
             this.DialogResult = DialogResult.OK;
         }
 
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
-            txtTenTacGia.SelectAll(); txtTenTacGia.Focus(); txtThongTin.Clear();
+            txtThongTin.Text = "";
+            txtTenTacGia.Clear();
+            txtTenTacGia.Focus();
         }
 
         private void btnTrove_Click(object sender, EventArgs e)
