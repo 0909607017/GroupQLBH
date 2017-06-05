@@ -71,16 +71,17 @@ namespace QLBH
                 else
                     txtLoiBaiHat.Text = "Chưa có lời cho bài hát !! == > bấm [Đồng ý] lần nữa để lưu bài hát này !";
                 return;
+            }
 
                 BaiHat_BUS a = new BaiHat_BUS(txtMaBaiHat.Text, txtTenBaiHat.Text, cboTheLoai.SelectedValue.ToString(), cboAlbum.SelectedValue.ToString(), cboCasi.SelectedValue.ToString(), cbotacGia.SelectedValue.ToString(), txtLoiBaiHat.Text);
                 int resutl = a.themBaiHat();
                 if (resutl == 0)
-                    MessageBox.Show("Thêm thành công bài hát [" + txtTenBaiHat.Text + "] với mã bài hát là [" + txtMaBaiHat.Text + "]");
+                    MessageBox.Show("Thêm thành công bài hát [" + txtTenBaiHat.Text + "] với mã bài hát là [" + txtMaBaiHat.Text + "]","Success!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 else
-                    MessageBox.Show("Thất bại rồi ! mã [" + txtMaBaiHat.Text + "] đã tồn tại");
+                    MessageBox.Show("Thêm bài hát thất bại !","Failed!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
 
                 this.DialogResult = DialogResult.OK;
-            }
+            
         }
 
         private void btnNhapLai_Click(object sender, EventArgs e)

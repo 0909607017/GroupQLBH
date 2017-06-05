@@ -13,10 +13,10 @@ namespace BUS
 
        public string mabaihat { get; set; }
        private string tenbaihat { get; set; }
-       private string matheloai;
-       private string maalbum;
-       private string macasi;
-       private string matacgia;
+       private string matheloai { get; set; }
+       private string maalbum { get; set; }
+       private string macasi { get; set; }
+       private string matacgia { get; set; }
        private string loibaihatt { get; set; }
 
        public BaiHat_BUS() { }

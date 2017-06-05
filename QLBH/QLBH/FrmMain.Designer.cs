@@ -1128,7 +1128,7 @@
             // bthienbh
             // 
             this.bthienbh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bthienbh.Location = new System.Drawing.Point(4, 290);
+            this.bthienbh.Location = new System.Drawing.Point(6, 290);
             this.bthienbh.Name = "bthienbh";
             this.bthienbh.Size = new System.Drawing.Size(147, 23);
             this.bthienbh.TabIndex = 12;
@@ -1149,6 +1149,7 @@
             // 
             // cboTacgia
             // 
+            this.cboTacgia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboTacgia.FormattingEnabled = true;
             this.cboTacgia.Location = new System.Drawing.Point(5, 244);
@@ -1182,6 +1183,7 @@
             // 
             // cboCasi
             // 
+            this.cboCasi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboCasi.FormattingEnabled = true;
             this.cboCasi.Location = new System.Drawing.Point(5, 175);
@@ -1215,6 +1217,7 @@
             // 
             // cboAlbum
             // 
+            this.cboAlbum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboAlbum.FormattingEnabled = true;
             this.cboAlbum.Location = new System.Drawing.Point(5, 110);
@@ -1248,6 +1251,7 @@
             // 
             // cboTL
             // 
+            this.cboTL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboTL.FormattingEnabled = true;
             this.cboTL.Location = new System.Drawing.Point(5, 45);
