@@ -43,7 +43,7 @@
             // lbthemalbum
             // 
             this.lbthemalbum.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbthemalbum.Location = new System.Drawing.Point(106, 9);
+            this.lbthemalbum.Location = new System.Drawing.Point(96, 9);
             this.lbthemalbum.Name = "lbthemalbum";
             this.lbthemalbum.Size = new System.Drawing.Size(296, 42);
             this.lbthemalbum.TabIndex = 0;

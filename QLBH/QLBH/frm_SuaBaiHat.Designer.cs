@@ -277,6 +277,7 @@
             // 
             // cbotacGia
             // 
+            this.cbotacGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbotacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbotacGia.FormattingEnabled = true;
             this.cbotacGia.Location = new System.Drawing.Point(9, 217);
@@ -286,6 +287,7 @@
             // 
             // cboCasi
             // 
+            this.cboCasi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCasi.FormattingEnabled = true;
             this.cboCasi.Location = new System.Drawing.Point(9, 153);
@@ -295,6 +297,7 @@
             // 
             // cboAlbum
             // 
+            this.cboAlbum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAlbum.FormattingEnabled = true;
             this.cboAlbum.Location = new System.Drawing.Point(9, 92);
@@ -304,6 +307,7 @@
             // 
             // cboTheLoai
             // 
+            this.cboTheLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTheLoai.FormattingEnabled = true;
             this.cboTheLoai.Location = new System.Drawing.Point(9, 36);

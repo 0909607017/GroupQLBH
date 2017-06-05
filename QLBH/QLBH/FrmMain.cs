@@ -330,9 +330,9 @@ namespace QLBH
             Album_BUS a = new Album_BUS(maalbumđangcchon);
             int loi = a.xoaAlbum();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công album [" + maalbumđangcchon + "] ", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công album [" + maalbumđangcchon + "] ", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("Xóa thất bại album [" + maalbumđangcchon + "] ", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xóa thất bại album [" + maalbumđangcchon + "] ", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             load_Album();
         }
@@ -407,9 +407,9 @@ namespace QLBH
             CaSi_BUS a = new CaSi_BUS(macasidangchon);
             int loi = a.xoaCasi();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công mã ca sĩ [" + macasidangchon + "] ", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công mã ca sĩ [" + macasidangchon + "] ", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("xóa thất bại mã ca sĩ [" + macasidangchon + "] ", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             load_Casi();
             loadlai_listview();
         }
@@ -471,9 +471,9 @@ namespace QLBH
             NhacSi_BUS a = new NhacSi_BUS(manhacsidcchon);
             int loi = a.xoaTacGia();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công mã nhạc sĩ [" + manhacsidcchon + "] ", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công mã nhạc sĩ [" + manhacsidcchon + "] ", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("xóa thất bại mã nhạc sĩ [" + manhacsidcchon + "] ", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("xóa thất bại mã nhạc sĩ [" + manhacsidcchon + "] ", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             Load_NhacSi();
             loadlai_listview();
         }
@@ -705,7 +705,7 @@ namespace QLBH
         {
             if (lisBaihat.SelectedItems.Count == 0)
                 return;
-            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa bài hát [" + lisBaihat.SelectedItems[0].SubItems[1].Text + "]  không ?", "xóa bài hát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult drl = MessageBox.Show("Bạn thực sự muốn xóa bài hát [" + lisBaihat.SelectedItems[0].SubItems[1].Text + "]  không ?", "Xóa bài hát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (drl == DialogResult.Cancel)
                 return;
 
@@ -713,9 +713,9 @@ namespace QLBH
             BaiHat_BUS a = new BaiHat_BUS(mabaihatdcchon);
             int loi = a.xoaBaiHat();
             if (loi == 0)
-                MessageBox.Show("Đã xóa thành công mã bài hát [" + mabaihatdcchon + "] ", "Thành Công !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã xóa thành công mã bài hát [" + mabaihatdcchon + "] ", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("Xóa thất bại mã bài hát [" + mabaihatdcchon + "] ", "Thất Bại !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xóa thất bại mã bài hát [" + mabaihatdcchon + "] ", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             Load_Baihat_cbo();
         }
 

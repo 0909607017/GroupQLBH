@@ -76,8 +76,9 @@ namespace DATA
 
         public int themBaiHat(string mabaihat, string tenbaihat, string matheloai, string maalbum, string macasi, string matacgia, string loibaihat)
         {
-            objCon.executeNonQuery("Insert into BAIHAT values('" + mabaihat + "','" + tenbaihat + "','" + matheloai + "','" + maalbum + "','" + macasi + "','" + matacgia + "','" + loibaihat + "')");
-            return objCon.executeNonQuery("Insert into CASI_BAIHAT values('" + macasi + "','" + mabaihat + "')");
+            //objCon.executeNonQuery("Insert into BAIHAT values('" + mabaihat + "','" + tenbaihat + "','" + matheloai + "','" + maalbum + "','" + macasi + "','" + matacgia + "','" + loibaihat + "')");
+            //return objCon.executeNonQuery("Insert into CASI_BAIHAT values('" + macasi + "','" + mabaihat + "')");
+            return objCon.executeNonQuery("INSERT INTO BAIHAT VALUES('" + mabaihat + "','" + tenbaihat + "','" + matheloai + "','" + maalbum + "','" + macasi + "','" + matacgia + "','" + loibaihat + "')");
         }
 
         public int xoaBaiHat(string mabaihat)
